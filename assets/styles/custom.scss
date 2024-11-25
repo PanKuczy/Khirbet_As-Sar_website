@@ -1,0 +1,12 @@
+// Override Bootstrap theme colors
+$primary: #853b23;
+$secondary: #ec9b3e;
+$success: #e5bb77;
+$danger: #F44336;
+$dark: #5b5b5b;
+
+$enable-negative-margins: true;
+$modal-backdrop-opacity: 0.8;
+
+// Import the rest of Bootstrap components
+@import "../../node_modules/bootstrap/scss/bootstrap";
