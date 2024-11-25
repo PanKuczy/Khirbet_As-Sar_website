@@ -3,6 +3,9 @@
 /layouts/templates.html
 /backup
 
+#OS db
+*.XnViewSort
+
 #node excludes
 
 # Logs
