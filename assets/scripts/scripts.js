@@ -5,7 +5,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 // SKRYPT DO DODAWANIA NAZWY PODSTRONY DO MENU W WERSJI ZMINIMALIZOWANEJ
 // Detect the current page name from the URL, including subpages
 const navLinks = document.querySelectorAll('.nav-link');
-const currentPath = window.location.pathname.split('/').pop() || '/pages/index.html'; // Default to 'index.html'
+const currentPath = window.location.pathname.split('/').pop() || 'index.html'; // Default to 'index.html'
 const navbarBrand = document.getElementById('navbarBrand');
 
 navLinks.forEach(link => {
