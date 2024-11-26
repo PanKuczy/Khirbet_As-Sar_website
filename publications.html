@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- HEAD v1.6 -->
+        <!-- HEAD v1.8 -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Khirbet es-Sar Excavations Project</title>
-        <!-- <base href="{{ site.baseurl }}/"> -->
+        <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
+        <script> 
+          const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+          const baseTag = document.createElement("base");
+          baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
+          document.head.appendChild(baseTag);
+        </script>
         <link href="assets/styles/custom.min.css" rel="stylesheet">
         <link href="assets/styles/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
         <script defer src="assets/fontawesome/sharp-solid.js"></script>
         <script defer src="assets/fontawesome/solid.js"></script>
         <script defer src="assets/fontawesome/js/fontawesome.js"></script>
-    
-    </head>
+      
+      </head>
 
 <body>
     <!-- <div class="container min-vh-100 d-flex flex-column"> -->
@@ -21,7 +27,7 @@
         <div id="header"></div>
         <!-- <div class="container"> -->
         <div class="container-fluid pt-0 mx-0 px-0"> <!--zmiana na fluid-->    
-            <!-- NAVBAR v1.9 with negative margin-->
+            <!-- NAVBAR v2.0 with negative margin-->
             <!-- <nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5 mx-auto"> BACKUP -->
                 <nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
                     <div class="container-fluid">
