@@ -214,6 +214,11 @@ figcaption {
     margin: 0 auto;
 
 }
+.figure-container-20perc {
+    max-width: 20%;
+    margin: 0 auto;
+
+}
 .figure-container-600 {
     min-width: 300px;
     max-width: 600px;
