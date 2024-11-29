@@ -52,6 +52,34 @@ document.querySelectorAll('.clickable-image').forEach(image => {
   });
 });
 
+document.querySelectorAll('.clickable-badge').forEach(button => {
+  button.addEventListener('click', () => {
+    const imageUrl = button.getAttribute('data-bs-image');
+    modalImage.src = imageUrl;
+    const imageAlt = button.getAttribute('alt');
+
+    modalImage.src = imageUrl;
+    modalTitle.textContent = imageAlt;
+
+    // Re-initialize Panzoom for each new image
+    if (panzoomInstance) panzoomInstance.destroy(); // Clean up previous instance
+    panzoomInstance = Panzoom(modalImage, {
+      maxScale: 3,
+      minScale: 1,
+      contain: 'outside',
+      cursor: 'grab',
+      step: 0.33,
+      animate: true,
+      duration: 300,
+      easing: "ease-in-out"
+    });
+
+    // Enable zooming with mouse wheel
+    zoomContainer.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+
+  });
+});
+
 // Track mouse state to handle panning correctly
 let isDragging = false;
 

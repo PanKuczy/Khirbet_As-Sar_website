@@ -179,11 +179,13 @@ img {
     display: block;
     width: 100%;
     height: auto;
-}
+} 
+    /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION ALE W SUMIE NIE WIEM CZY NIE POWINNO BYC WYLACZONE BO ZBYT OGOLNE? */
 figure {
-    display: inline-block; /* Shrink to fit content */
+    display: inline-block;
     margin: 0 auto;
-}
+} 
+    /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION */
 figcaption {
     max-width: 100%;
     word-wrap: break-word;
@@ -203,11 +205,33 @@ figcaption {
     max-width: 400px;
     margin: 0 auto;
 }
+.figure{
+    display: inline-block;
+}
+ /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION */
+ .figure-image-vert400{
+    max-height: 400px;
+    width: auto;
+}
+ 
+.figure-image-vert300{
+    max-height: 300px;
+    width: auto;
+}
+.figure-image-vert200{
+    max-height: 250px;
+    width: auto;
+}
+
+.figure-container-50perc {
+    max-width: 50%;
+    margin: 0 auto;
+    z-index: 1500;
+}
 .figure-container-40perc {
     max-width: 40%;
     margin: 0 auto;
     z-index: 1500;
-
 }
 .figure-container-30perc {
     max-width: 30%;
@@ -242,6 +266,17 @@ figcaption {
     cursor: zoom-in;
 }
 
+.clickable-badge{
+    border: none;
+    background-color: var(--bs-secondary);
+}
+
+.clickable-badge:hover{
+    cursor: pointer;
+    background-color: var(--bs-primary);
+    transition: 0.3s;
+}
+
 .modal-content {
     width: auto;
 
@@ -268,6 +303,27 @@ figcaption {
   
 .pswp {
     z-index: 10000;
+}
+
+.pswp__custom-caption {
+    background: var(--bs-primary);
+    font-size: 16px;
+    color: #fff;
+    width: calc(100% - 32px);
+    max-width: 400px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    position: absolute;
+    left: 265px;
+    top: 16px;
+    transform: translateX(-50%);
+}
+.pswp__custom-caption a {
+    color: #fff;
+    text-decoration: underline;
+}
+.hidden-caption-content {
+    display: none;
 }
 
 /* QUOTES */
