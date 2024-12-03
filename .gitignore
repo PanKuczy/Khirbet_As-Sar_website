@@ -1,6 +1,7 @@
 #templates and backups
 /temp
 /layouts/templates.html
+/layouts/snippets.html
 /backup
 
 #OS db
