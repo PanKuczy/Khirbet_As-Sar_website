@@ -255,6 +255,20 @@ figcaption {
         max-width: 90%;
         margin: 0 auto;
     }
+    #exploration-fig3-float{
+        display: none;
+    }
+
+}
+#exploration-fig3-no-float{
+    max-width: 90%;
+    margin: 0 auto;   
+}
+@media (min-width: 768px){
+    #exploration-fig3-no-float{
+        display: none;
+        
+    }
 }
 
 @media (max-width: 992px){
@@ -262,6 +276,10 @@ figcaption {
         max-width: 90%;
         margin: 0 auto;
     }
+}
+#exploration-fig3{
+    /* width: 100%; */
+    display: flexbox;
 }
 
 /* Zoomable Image Styles */
