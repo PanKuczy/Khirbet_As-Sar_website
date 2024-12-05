@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search results</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!-- Search Form -->
+      <form onsubmit="handleSearch(event)" class="searchbar">
+        <input type="text" id="searchInput" placeholder="Search..." class="form-control mb-3" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Search Results Display -->
+      <div class="container row">
+        <div class="col-2"></div>
+        <div id="searchResults" class="mt-4 col-8"></div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <script>
+      // Create the FlexSearch index with options for flexible matching
+      const index = new FlexSearch.Document({
+        document: {
+          id: "id",
+          index: ["title", "section", "content"], // Index title, section, and content
+          store: ["title", "section", "content", "url"], // Store fields for results display
+        },
+        tokenize: "full", // Tokenize the whole content (ensure we get complete words)
+        suggest: false, // Allow for fuzzy or approximate matching
+      });
+
+      let dataLoaded = false;
+
+      // Load and index the data (same JSON file)
+      console.log("Initiating fetch...");
+      fetch("pages.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          console.log("Fetch succeeded.");
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Data loaded for indexing:", data);
+          data.forEach((doc) => {
+            index.add(doc);
+            console.log("Indexed document:", doc);
+          });
+          dataLoaded = true; // Mark data as loaded
+          console.log("Indexing complete.");
+        })
+        .catch((error) => {
+          console.error("Error loading data:", error);
+        });
+
+      // Extract query parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get("q");
+      console.log("Search query from URL:", query); // Log the query parameter to verify it's correct
+
+      // Perform the search and display results
+      function performSearch(query) {
+        if (!dataLoaded) {
+          console.log("Data not loaded yet. Please wait.");
+          return;
+        }
+
+        console.log("Performing search for:", query);
+
+        const results = index.search(query, {
+          fuzzy: 1,
+          enrich: true,
+          ignoreNorm: true,
+        });
+
+        console.log("Search results:", results);
+
+        const resultsContainer = document.getElementById("searchResults");
+        resultsContainer.innerHTML = ""; // Clear previous results
+
+        if (results.length > 0) {
+          results.forEach((result) => {
+            const resultItems = result.result.map((item) => item).flat();
+            resultItems.forEach((item) => {
+              const resultElement = document.createElement("div");
+              resultElement.classList.add("result-item", "card", "my-3");
+              // Truncate content to the first 25 words
+              const truncatedContent = item.doc.content.split(" ").slice(0, 25).join(" ") + "...";
+                
+              // Append the query as a parameter to the link
+                const resultUrl = `${item.doc.url}?source=search&query=${encodeURIComponent(query)}`;
+
+              resultElement.innerHTML = `
+                <div class="card-body">
+                  <h5 class="card-title text-primary">${item.doc.title}</h5>
+                  <p><strong>Section:</strong> ${item.doc.section}</p>
+                  <p>${truncatedContent}</p>
+                  <a href="${resultUrl}" class="stretched-link"></a>
+                </div>
+              `;
+              resultsContainer.appendChild(resultElement);
+            });
+          });
+        } else {
+          resultsContainer.innerHTML = "<p>No results found.</p>";
+        }
+      }
+
+      // Handle search form submission
+      function handleSearch(event) {
+        if (event) event.preventDefault(); // Prevent form submission default behavior
+
+        const query = document.getElementById("searchInput").value.trim();
+        if (!query) {
+          console.log("No query provided.");
+          return;
+        }
+
+        // Update the URL with the new query and reload the page
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set("q", query);
+        window.location.href = currentUrl.toString();
+      }
+
+      // Check if the search query is passed correctly from the URL
+      if (query) {
+        console.log("Initial query from URL:", query);
+        document.getElementById("searchInput").value = query; // Prepopulate the search input
+        // Wait for the data to load, then perform the search
+        const interval = setInterval(() => {
+          if (dataLoaded) {
+            clearInterval(interval);
+            performSearch(query);
+          }
+        }, 100); // Poll every 100ms until data is ready
+      }
+    </script>
+  </body>
+</html>

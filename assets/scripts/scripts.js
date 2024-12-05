@@ -107,3 +107,14 @@ document.addEventListener('mouseup', () => {
     if (panzoomInstance) panzoomInstance.resume(); // Resume Panzoom animations
   }
 });
+
+// SKRYPT DO SEARCH'a
+// Handle search form submission
+function handleSearch(event) {
+  event.preventDefault(); // Prevent the form from reloading the page
+  const query = document.getElementById("searchInput").value;
+  // Redirect to the search_result.html page with the query parameter
+  window.location.href = `search_result.html?q=${encodeURIComponent(
+      query
+  )}`;
+  }

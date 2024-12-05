@@ -1,441 +1,378 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-        <!-- HEAD v1.8 -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Khirbet es-Sar Excavations Project</title>
-        <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
-        <script> 
+<head>
+<!-- HEAD v1.9 -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Staff - Khirbet es-Sar Excavations Project</title>
+<!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
+<script> 
           const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
           const baseTag = document.createElement("base");
           baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
           document.head.appendChild(baseTag);
         </script>
-        <link href="assets/styles/custom.min.css" rel="stylesheet">
-        <link href="assets/styles/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-        <script defer src="assets/fontawesome/sharp-solid.js"></script>
-        <script defer src="assets/fontawesome/solid.js"></script>
-        <script defer src="assets/fontawesome/js/fontawesome.js"></script>
-      
-      </head>
-
+<link href="assets/styles/custom.min.css" rel="stylesheet"/>
+<link href="assets/styles/styles.css" rel="stylesheet"/>
+<link href="assets/fontawesome/css/all.min.css" rel="stylesheet"/>
+<script defer="" src="assets/fontawesome/sharp-solid.js"></script>
+<script defer="" src="assets/fontawesome/solid.js"></script>
+<script defer="" src="assets/fontawesome/js/fontawesome.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
+</head>
 <body>
-    <!-- <div class="container min-vh-100 d-flex flex-column"> -->
-    <div class="container-fluid min-vh-100 d-flex flex-column px-0"> <!--zmiana na fluid-->
-        <div id="header"></div>
-        <!-- <div class="container"> -->
-        <div class="container-fluid pt-0 mx-0 px-0"> <!--zmiana na fluid-->   
-            <!-- NAVBAR v2.0 with negative margin-->
-            <!-- <nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5 mx-auto"> BACKUP -->
-                <nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" id="navbarBrand" href="#">Brand</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <div class="col-xl-1 d-flex"></div>
-                            <ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
-                                        <span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
+<div class="container-fluid min-vh-100 d-flex flex-column px-0">
+<div id="header"></div>
+<div class="container-fluid pt-0 mx-0 px-0">
+<!-- NAVBAR v2.1 -->
+<nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
+<div class="container-fluid">
+<a class="navbar-brand" href="#" id="navbarBrand">Brand</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<div class="col-xl-1 d-flex"></div>
+<ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
+<span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
-                                        <span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Site
+</li>
+<li class="nav-item">
+<a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
+<span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Site
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative" href="exploration.html">
-                                        <span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span> Exploration
+</li>
+<li class="nav-item">
+<a class="nav-link px-0 d-flex align-items-center position-relative" href="exploration.html">
+<span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span> Exploration
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative" href="modern_research.html">
-                                        <span class="nav-icon"><i class="fa-solid fa-microscope"></i></span> Current Project
+</li>
+<li class="nav-item">
+<a class="nav-link px-0 d-flex align-items-center position-relative" href="modern_research.html">
+<span class="nav-icon"><i class="fa-solid fa-microscope"></i></span> Current Project
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative nav-item-active" aria-current="page" href="staff.html">
-                                        <span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link px-0 d-flex align-items-center position-relative nav-item-active" href="staff.html">
+<span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
-                                        <span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
+</li>
+<li class="nav-item">
+<a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
+<span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
-                                        <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
+</li>
+<li class="nav-item">
+<a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
+<span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
                                     </a>
-                                </li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                            <div class="col-xl-1 d-flex"></div>
-                        </div>
-                    </div>
-                </nav>
-    
-            <!-- CONTENT -->
-            <!-- STAFF v1.1 -->
-            <div class="container pt-3">
-                <div class="row mx-0 mx-lg-5">
-                    <div class="text-center col-md-12 ">
-                        <h2 class="pt-3">Meet the staff</h2>
-                        <h4 class="pt-2 pb-3">The co-directors of the Khirbat as-Sar excavations:</h4>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <img src="assets/images/staff-mb2_600.jpg" class="staff-image img-fluid shadow rounded-circle mx-auto mb-3 d-block" width="140" height="140" preserveAspectRatio="xMidYMid slice" alt="Dr. hab. Mariusz Burdajewicz">
-                                    <p><b>Dr. hab. Mariusz Burdajewicz</b><br>
-                                        Faculty of Archaeology, University of Warsaw<br>
+</li>
+</ul>
+<form class="d-flex" onsubmit="handleSearch(event)">
+<input aria-label="Search" class="form-control me-2" id="searchInput" placeholder="Search" type="search"/>
+<button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<div class="col-xl-1 d-flex"></div>
+</div>
+</div>
+</nav>
+<!-- CONTENT -->
+<!-- STAFF v1.1 -->
+<div class="container pt-3">
+<div class="row mx-0 mx-lg-5">
+<div class="text-center col-md-12">
+<h2 class="pt-3" id="section-178">Meet the staff</h2>
+<h4 class="pt-2 pb-3" id="section-179">The co-directors of the Khirbat as-Sar excavations:</h4>
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-12">
+<img alt="Dr. hab. Mariusz Burdajewicz" class="staff-image img-fluid shadow rounded-circle mx-auto mb-3 d-block" height="140" preserveaspectratio="xMidYMid slice" src="assets/images/staff-mb2_600.jpg" width="140"/>
+<p id="paragraph-181"><b>Dr. hab. Mariusz Burdajewicz</b><br/>
+                                        Faculty of Archaeology, University of Warsaw<br/>
                                         e-mail: <a href="mailto:mariuszali@yahoo.fr">mariuszali@yahoo.fr</a>
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <img src="assets/images/staff-jm.jpg" class="staff-image img-fluid shadow rounded-circle mx-auto mb-3 d-block" width="140" height="140" preserveAspectRatio="xMidYMid slice" alt="Jolanta Młynarczyk">
-                                    <p><b>Prof. Dr. Jolanta Młynarczyk</b><br>
-                                        Faculty of Archaeology, University of Warsaw (emerita)<br>
+</p>
+</div>
+<div class="col-lg-6 col-md-12">
+<img alt="Jolanta Młynarczyk" class="staff-image img-fluid shadow rounded-circle mx-auto mb-3 d-block" height="140" preserveaspectratio="xMidYMid slice" src="assets/images/staff-jm.jpg" width="140"/>
+<p id="paragraph-182"><b>Prof. Dr. Jolanta Młynarczyk</b><br/>
+                                        Faculty of Archaeology, University of Warsaw (emerita)<br/>
                                         e-mail: <a href="mailto:susyam@wp.pl">susyam@wp.pl</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="pt-5 pb-3">Other participants:</h4>
-                        <dl class="row ">
-                            <div class="col-xl-3 col-lg-2 col-md-1"></div>
-                            <div class="col-xl-6 col-lg-8 col-md-10">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Dr. Anna Kubicka-Sowińska</dt> 
-                                        <dd class="text-end col-5">Architect</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Wroclaw University of Science and Technology</small></dt> 
-                                        <dd class="text-end col-5">2019, 2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Dr. Piotr Makowski</dt> 
-                                        <dd class="text-end col-5">Ceramologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>University of Warsaw</small></dt> 
-                                        <dd class="text-end col-5">2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Dr. Julia Maria Burdajewicz</dt> 
-                                        <dd class="text-end col-5">Archaeological Conservator</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Academy of Fine Arts, Warsaw</small></dt> 
-                                        <dd class="text-end col-5">2023, 2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Dr. Bartłomiej Ćmielewski</dt> 
-                                        <dd class="text-end col-5">Land Surveyor</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Wroclaw University of Science and Technology</small></dt> 
-                                        <dd class="text-end col-5">2023</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Dr. Katarzyna Radziwiłko</dt> 
-                                        <dd class="text-end col-5">Public Archaeology Expert</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Independent scholar</small></dt> 
-                                        <dd class="text-end col-5">2023, 2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7" id="hamiburak"></dt>
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Krukowski Polish-Georgian Interdisciplinary Research Centre</small></dt> 
-                                        <dd class="text-end col-5">2023, 2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Mr. Marcin Gostkowski</dt> 
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Independent scholar</small></dt> 
-                                        <dd class="text-end col-5">2018</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Ms. Karolina Warecka</dt> 
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>University of Warsaw</small></dt> 
-                                        <dd class="text-end col-5">2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Mr. Adel Oubraham</dt> 
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>French National Institute for Preventive Archaeological Research</small></dt> 
-                                        <dd class="text-end col-5">2023, 2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Mr. Jakub Ordutowski</dt> 
-                                        <dd class="text-end col-5">Electro-Resistivity Surveyor</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Maria Curie-Skłodowska University in Lublin</small></dt> 
-                                        <dd class="text-end col-5">2024</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Mr. Robert Ryndziewicz</dt> 
-                                        <dd class="text-end col-5">Electro-Resistivity Surveyor</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>Institute of Archaeology and Ethnology Polish Academy of Sciences</small></dt> 
-                                        <dd class="text-end col-5">2018</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Mr. Arkadiusz Cegliński</dt> 
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>University of Warsaw</small></dt> 
-                                        <dd class="text-end col-5">2023</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Ms. Monika Dunajko</dt> 
-                                        <dd class="text-end col-5">Archaeologist</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>University of Warsaw</small></dt> 
-                                        <dd class="text-end col-5">2023</dd> 
-                                    </div>
-                                </div>
-                                <hr class="mx-5 text-secondary">
-                                <div class="col-12 "> 
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7">Fr. Rała Wędzicki OP</dt> 
-                                        <dd class="text-end col-5">Historian</dd> 
-                                    </div>
-                                    <div class="col-12 d-flex participant-row">
-                                        <dt class="text-start col-7 fw-light"><small>French Biblical and Archaeological School of Jerusalem</small></dt> 
-                                        <dd class="text-end col-5">2023</dd> 
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div class="col-xl-3 col-lg-2 col-md-1"></div>
-                        </dl>
-
-                        <!-- OTHER PARTICIPANTS PHOTOS -->
-                        <div class="container">
-                            <div class="row other-participants-row pt-5">
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/DSCN8770sqcr.jpg" class="img-fluid shadow rounded d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/DSCN9231sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG20240508132715sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG20240515105408sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG20240516105216sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG20240516111309sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG_20240508_090130sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG_3419sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG_3470sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG_3512sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2024_sq/IMG_3532sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <!-- <div class="col-lg-3 col-md-6">
+</p>
+</div>
+</div>
+</div>
+<h4 class="pt-5 pb-3" id="section-180">Other participants:</h4>
+<dl class="row">
+<div class="col-xl-3 col-lg-2 col-md-1"></div>
+<div class="col-xl-6 col-lg-8 col-md-10">
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-183">Dr. Anna Kubicka-Sowińska</dt>
+<dd class="text-end col-5" id="dd-210">Architect</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-184"><small>Wroclaw University of Science and Technology</small></dt>
+<dd class="text-end col-5" id="dd-211">2019, 2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-185">Dr. Piotr Makowski</dt>
+<dd class="text-end col-5" id="dd-212">Ceramologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-186"><small>University of Warsaw</small></dt>
+<dd class="text-end col-5" id="dd-213">2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-187">Dr. Julia Maria Burdajewicz</dt>
+<dd class="text-end col-5" id="dd-214">Archaeological Conservator</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-188"><small>Academy of Fine Arts, Warsaw</small></dt>
+<dd class="text-end col-5" id="dd-215">2023, 2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-189">Dr. Bartłomiej Ćmielewski</dt>
+<dd class="text-end col-5" id="dd-216">Land Surveyor</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-190"><small>Wroclaw University of Science and Technology</small></dt>
+<dd class="text-end col-5" id="dd-217">2023</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-191">Dr. Katarzyna Radziwiłko</dt>
+<dd class="text-end col-5" id="dd-218">Public Archaeology Expert</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-192"><small>Independent scholar</small></dt>
+<dd class="text-end col-5" id="dd-219">2023, 2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="hamiburak"></dt>
+<dd class="text-end col-5" id="dd-220">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-193"><small>Krukowski Polish-Georgian Interdisciplinary Research Centre</small></dt>
+<dd class="text-end col-5" id="dd-221">2023, 2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-194">Mr. Marcin Gostkowski</dt>
+<dd class="text-end col-5" id="dd-222">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-195"><small>Independent scholar</small></dt>
+<dd class="text-end col-5" id="dd-223">2018</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-196">Ms. Karolina Warecka</dt>
+<dd class="text-end col-5" id="dd-224">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-197"><small>University of Warsaw</small></dt>
+<dd class="text-end col-5" id="dd-225">2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-198">Mr. Adel Oubraham</dt>
+<dd class="text-end col-5" id="dd-226">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-199"><small>French National Institute for Preventive Archaeological Research</small></dt>
+<dd class="text-end col-5" id="dd-227">2023, 2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-200">Mr. Jakub Ordutowski</dt>
+<dd class="text-end col-5" id="dd-228">Electro-Resistivity Surveyor</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-201"><small>Maria Curie-Skłodowska University in Lublin</small></dt>
+<dd class="text-end col-5" id="dd-229">2024</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-202">Mr. Robert Ryndziewicz</dt>
+<dd class="text-end col-5" id="dd-230">Electro-Resistivity Surveyor</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-203"><small>Institute of Archaeology and Ethnology Polish Academy of Sciences</small></dt>
+<dd class="text-end col-5" id="dd-231">2018</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-204">Mr. Arkadiusz Cegliński</dt>
+<dd class="text-end col-5" id="dd-232">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-205"><small>University of Warsaw</small></dt>
+<dd class="text-end col-5" id="dd-233">2023</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-206">Ms. Monika Dunajko</dt>
+<dd class="text-end col-5" id="dd-234">Archaeologist</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-207"><small>University of Warsaw</small></dt>
+<dd class="text-end col-5" id="dd-235">2023</dd>
+</div>
+</div>
+<hr class="mx-5 text-secondary"/>
+<div class="col-12">
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7" id="dt-208">Fr. Rała Wędzicki OP</dt>
+<dd class="text-end col-5" id="dd-236">Historian</dd>
+</div>
+<div class="col-12 d-flex participant-row">
+<dt class="text-start col-7 fw-light" id="dt-209"><small>French Biblical and Archaeological School of Jerusalem</small></dt>
+<dd class="text-end col-5" id="dd-237">2023</dd>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-2 col-md-1"></div>
+</dl>
+<!-- OTHER PARTICIPANTS PHOTOS -->
+<div class="container">
+<div class="row other-participants-row pt-5">
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/DSCN8770sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/DSCN9231sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG20240508132715sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG20240515105408sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG20240516105216sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG20240516111309sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG_20240508_090130sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG_3419sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG_3470sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG_3512sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2024_sq/IMG_3532sqcr.jpg" width="240"/>
+</div>
+<!-- <div class="col-lg-3 col-md-6">
                                     <img src="assets/images/staff2024_sq/team-photo-season2024sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
                                 </div> -->
-                                
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/DSC00048sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/DSCN9344sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_0566sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_0732sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_0901sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230511_133555sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230511_133726sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230514_161946sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230518_105707sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230521_094712sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-6">
-                                    <img src="assets/images/staff2023_sq/IMG_20230525_175416sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
-                                </div>
-
-
-                                <!-- <div class="col-lg-3 col-md-6">
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/DSC00048sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/DSCN9344sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_0566sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_0732sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_0901sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230511_133555sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230511_133726sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230514_161946sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230518_105707sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230521_094712sqcr.jpg" width="240"/>
+</div>
+<div class="col-lg-3 col-md-6">
+<img alt="" class="img-fluid shadow rounded d-block" height="240" preserveaspectratio="xMidYMid" src="assets/images/staff2023_sq/IMG_20230525_175416sqcr.jpg" width="240"/>
+</div>
+<!-- <div class="col-lg-3 col-md-6">
                                     <img src="assets/images/staff2023_sq/team-photo-season2023sqcr.jpg" class="img-fluid shadow rounded   d-block" width="240" height="240" preserveAspectRatio="xMidYMid" alt="">
                                 </div> -->
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-        </div>
-
-        <div id="footer" class="pt-5 mt-auto"></div>
-    </div>
-    
-    <!-- HIDDEN COMMON TEMPLATES -->
-    <!-- clickable popup modal v1.2 -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down">
-            <div class="modal-content ">
-            <div class="modal-header">
-                <h6 class="modal-title" id="imageModalLabel"></h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="zoom-container">
-                    <img id="modalImage" src="" alt="Image Preview">
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <!-- END OF TEMPLATES -->
-
-    <!-- SCRIPTS v1.6 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-    <script src="assets/scripts/footer.js"></script>
-    <script src="assets/scripts/header.js"></script>
-    <script src="assets/scripts/scripts.js"></script>
-    <script type="module" src="assets/scripts/gallery.js"></script>
-
-    <!-- END OF SCRIPTS -->
-
-
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-5 mt-auto" id="footer"></div>
+</div>
+<!-- HIDDEN COMMON TEMPLATES -->
+<!-- clickable popup modal v1.2 -->
+<div aria-hidden="true" aria-labelledby="imageModalLabel" class="modal fade" id="imageModal" tabindex="-1">
+<div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down">
+<div class="modal-content">
+<div class="modal-header">
+<h6 class="modal-title" id="imageModalLabel"></h6>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="zoom-container">
+<img alt="Image Preview" id="modalImage" src=""/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF TEMPLATES -->
+<!-- SCRIPTS v1.6 -->
+<script crossorigin="anonymous" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="assets/scripts/footer.js"></script>
+<script src="assets/scripts/header.js"></script>
+<script src="assets/scripts/scripts.js"></script>
+<script src="assets/scripts/gallery.js" type="module"></script>
+<!-- END OF SCRIPTS -->
 </body>
-
 </html>
