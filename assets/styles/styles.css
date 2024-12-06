@@ -83,7 +83,6 @@
 
 .pdf-link-container{
     position: relative;
-    /* max-height: 200px; */
 }
 .publication-download-icon{
     position: absolute;
@@ -157,20 +156,19 @@ display: none;
 }
 
 #navbarBrand {
-    display: none; /* Hide the brand by default (desktop view) */
+    display: none;
 }
 
-@media (max-width: 992px) { /* Show the brand only when the navbar is collapsed */
+@media (max-width: 992px) { 
 #navbarBrand {
     display: block;
 }
 }
 
 .navbar-collapse.show + .container-fluid #navbarBrand {
-    display: none; /* Hide the brand again when the menu is open */
+    display: none; 
 }
 .nav-item-active {
-    /* font-weight: bolder; */
     text-decoration: underline ;
     text-underline-offset: 5px;
 }
@@ -180,12 +178,11 @@ img {
     width: 100%;
     height: auto;
 } 
-    /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION ALE W SUMIE NIE WIEM CZY NIE POWINNO BYC WYLACZONE BO ZBYT OGOLNE? */
 figure {
     display: inline-block;
     margin: 0 auto;
 } 
-    /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION */
+
 figcaption {
     max-width: 100%;
     word-wrap: break-word;
@@ -245,26 +242,38 @@ figcaption {
 
 }
 .figure-container-600 {
-    min-width: 300px;
     max-width: 600px;
     margin: 0 auto;
+}
+@media (max-width: 480px){
+    #exploration-fig2-float{
+        display: none;
+    }
+}
+@media (min-width: 481px){
+    #exploration-fig2-no-float{
+        display: none;
+    }
 }
 
 @media (max-width: 768px){
     .display-no-float-md {
-        max-width: 90%;
+        max-width: 100%;
         margin: 0 auto;
+    }
+    .figure-image-vert200, .figure-image-vert300, .figure-image-vert400 {
+        max-height: none;
     }
     #exploration-fig3-float{
         display: none;
     }
-
 }
+
 #exploration-fig3-no-float{
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;   
 }
-@media (min-width: 768px){
+@media (min-width: 769px){
     #exploration-fig3-no-float{
         display: none;
         
@@ -319,10 +328,9 @@ figcaption {
 }
 
 #modalImage {
-    max-width: 100%;  /* Limit width to container */
-    max-height: 100%; /* Limit height to container */
-    object-fit: contain; /* Preserve aspect ratio */
-    /* display: block; */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     margin: 0 auto;
 }
 
@@ -342,15 +350,18 @@ figcaption {
     font-size: 16px;
     color: #fff;
     width: calc(100% - 32px);
-    /* max-width: 400px; */
-    max-width: 40%;
+    max-width: 35%;
     padding: 2px 8px;
     border-radius: 4px;
     position: absolute;
-    /* left: 265px; */
     left: 66px;
     top: 16px;
     /* transform: translateX(-50%); */
+}
+@media (max-width: 480px){
+    .pswp__custom-caption{
+        max-width: calc(100% - 170px);
+    }
 }
 .pswp__custom-caption a {
     color: #fff;
