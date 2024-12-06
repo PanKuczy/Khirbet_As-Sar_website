@@ -342,13 +342,15 @@ figcaption {
     font-size: 16px;
     color: #fff;
     width: calc(100% - 32px);
-    max-width: 400px;
+    /* max-width: 400px; */
+    max-width: 40%;
     padding: 2px 8px;
     border-radius: 4px;
     position: absolute;
-    left: 265px;
+    /* left: 265px; */
+    left: 66px;
     top: 16px;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
 }
 .pswp__custom-caption a {
     color: #fff;

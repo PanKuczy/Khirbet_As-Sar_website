@@ -162,15 +162,15 @@
               resultElement.classList.add("result-item", "card", "my-3");
               // Truncate content to the first 25 words
               const truncatedContent = item.doc.content.split(" ").slice(0, 25).join(" ") + "...";
-              const truncatedTitle = item.doc.title.slice(0, -37);                
+              const truncatedSection = item.doc.section.slice(0, -37);                
               // Append the query as a parameter to the link
                 // const resultUrl = `${item.doc.url}?source=search&query=${encodeURIComponent(query)}`;
                 const resultUrl = `${item.doc.url}`;
 
               resultElement.innerHTML = `
                 <div class="card-body">
-                  <h5 class="card-title text-primary">${truncatedTitle}</h5>
-                  <p><strong>Section:</strong> ${item.doc.section}</p>
+                  <h5 class="card-title text-primary">${item.doc.title}</h5>
+                  <p><strong>Section:</strong> ${truncatedSection}</p>
                   <p>${truncatedContent}</p>
                   <a href="${resultUrl}" class="stretched-link"></a>
                 </div>
