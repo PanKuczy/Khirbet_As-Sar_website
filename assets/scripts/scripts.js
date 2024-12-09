@@ -11,7 +11,7 @@ const navbarBrand = document.getElementById('navbarBrand');
 navLinks.forEach(link => {
   // If the link href matches the current path, mark it as active and set the brand text
   if (link.getAttribute('href').endsWith(currentPath)) {
-    link.classList.add('active');
+    // link.classList.add('active'); CHYBA NIEPOTRZEBNE A PSUJE ROZWIJANE MENU
     navbarBrand.textContent = link.textContent; // Set brand to the active link's text
   }
 });
