@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- HEAD v1.9+photoswipe -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Current Project - Khirbet es-Sar Excavations Project</title>
+        <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
+        <script> 
+          const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+          const baseTag = document.createElement("base");
+          baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
+          document.head.appendChild(baseTag);
+        </script>
+        <link href="assets/styles/custom.min.css" rel="stylesheet">
+        <link href="assets/styles/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="https://www.unpkg.com/photoswipe@5.4.4/dist/photoswipe.css">
+        <script defer src="assets/fontawesome/sharp-solid.js"></script>
+        <script defer src="assets/fontawesome/solid.js"></script>
+        <script defer src="assets/fontawesome/js/fontawesome.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
+      
+    </head>
+
+<body>
+    <div class="container-fluid min-vh-100 d-flex flex-column px-0">
+        <div id="header"></div>
+        <div class="container-fluid pt-0 mx-0 px-0">  
+            <!-- NAVBAR v2.1 -->
+            <!-- NAVBAR v2.2 -->
+            <nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand" id="navbarBrand" href="#">Brand</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="col-xl-1 d-flex"></div>
+                        <ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-map"></i></span> Site
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="exploration.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Exploration
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                              <a class="nav-link dropdown-toggle px-0 d-flex align-items-center position-relative nav-item-active active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                  <span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span>Current Project
+                                </a>
+                                <ul class="dropdown-menu mt-2 dropdown-menu-dark bg-dark-opacity animate slideIn">
+                                  <li><a class="dropdown-item" href="current_project_2023.html">
+                                    Current Project 2023</a></li>
+                                  <li><a class="dropdown-item nav-item-active" aria-current="page" href="current_project_2024.html">
+                                    Current Project 2024</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="staff.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" onsubmit="handleSearch(event)">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <div class="col-xl-1 d-flex"></div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- CONTENT -->
+            <div class="container pt-3">
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+                        <h2>Current Project</h2>
+                        <p >
+                            The investigation of the Polish archaeological mission in Khirbat as-Sar in 2018 and 2019, conducted on behalf of the PCMA, ended due to the Coronavirus-19 pandemic. A new research project enabling the resumption of field research did not begin until 2022, this time on behalf of the Faculty of Archaeology, University of Warsaw, and with funding from the National Science Centre (UMO 2021/43/B/HS3/00813). So far, two seasons of excavations have taken place.
+                        </p>
+                        <h2>Season 2024</h2>
+                        <p>The archaeological team directed by Mariusz Burdajewicz and Jolanta Młynarczyk from the Faculty of Archaeology started a new excavation project in Khirbat as-Sar between 30 April and 27 May 2023 (Excavation Permit no. 2023/12). Three trenches (T1/1, T1/3, and T2-S) were opened in the eastern part of the courtyard of the architectural compound preliminary identified as a Roman-period sanctuary. Trenches T1/1 and T1/T3 formed an L-shaped unit in the northeastern part of the courtyard. Topographically, they have been extensions of the trenches made in 2019 (Sq1 and Sq3). Trench 2-S was opened in the southeastern part of the compound, while a new trench, T4, was on the northern side of the “Ammonite tower” 
+                            (<button
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#imageModal"
+                            data-bs-image="assets/images/current_project/fig._1._plan_2023.jpg"
+                            class="badge clickable-badge"
+                            alt="Fig. 1. Location of the Trenches excavated in 2023 (image by Adel Wojtek Oubraham)"
+                            >Fig. 1</button>).
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._1._plan_2023.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 1. Location of the Trenches excavated in 2023 (image by Adel Wojtek Oubraham)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._1._plan_2023.jpg">
+                                        <figcaption class="figure-caption float">Fig. 1. Location of the Trenches excavated in 2023<br> (image by Adel <i>Wojtek</i> Oubraham)</figcaption>
+                                    </figure>
+                                </div>        
+                            </div>
+                            <h4 class="fw-light pt-5">Trench 1/1</h4>
+                            <p>
+                                Trench 1/1 is a westward extension of Sq1 on the western side of the N-S wall (W01), which was excavated in 2019 and identified as an Islamic addition to a Roman-period construction. This wall exhibited two clear phases: one with a doorway and another with the door's blockage. The final phase of the settlement is associated with an earthen floor 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._2._floor_mamluk.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 2. Floor F004 in T1/1 with a doorway in the northern wall (W07), viewed from the south (image by Mariusz Burdajewicz)."
+                                >Fig. 2
+                                </button>), 
+                                presumably of either the later Mamluk or even the Ottoman period.
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._2._floor_mamluk.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 2. Floor F004 in T1/1 with a doorway in the northern wall (W07), viewed from the south (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._2._floor_mamluk.jpg">
+                                        <figcaption class="figure-caption float">Fig. 2. Floor F004 in T1/1 with a doorway in the northern wall <br>(W07), viewed from the south (image by Mariusz Burdajewicz).</figcaption>
+                                    </figure>
+                                </div>        
+                            </div>
+
+                            <p>
+                                The sequence of walls and floors has been evident. Under a Mamluk period habitation phase, there was a Byzantine-to-Early Islamic floor in a room spanned by an arch supported by two pillars on its northern and southern sides, respectively 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._3._early-islamic_floor.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 3. Floor F007 in T1/1 viewed from the south (image by Mariusz Burdajewicz)."
+                                >Fig. 3
+                                </button>);
+                                 the room's eastern limit is unknown. The south wall of that room has been resting on a Roman period wall, possibly by a gate leading to the sanctuary courtyard. The lowermost level reached in this Trench should be dated to the Roman period. Along the southern foundation offset of an East-West wall, the tops of the slabs made a horizontal surface.
+                            </p>
+                            <p>
+                                In contrast, in the remainder of the Trench, the fill was made up of an uneven mass of boulders 
+                                (<button 
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._4._roman_floor-rgb.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 4. Floor F009 in T1/1: stone pavement(?) in the southern part, and fill of boulders to the north; view from the east (image by Mariusz Burdajewicz)"
+                                >Fig. 4</button>). 
+                                Unfortunately, the ceramic material from the lowermost contexts contained only a few diagnostic pieces and no fine wares at all that would provide more detailed dating. Under the Trench's western section, the lowest course of an N-S wall is visible, and its destination and chronology are to be examined in the feature.
+                            </p>
+
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._3._early-islamic_floor.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 3. Floor F007 in T1/1 viewed from the south (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._3._early-islamic_floor.jpg">
+    
+                                        <figcaption class="figure-caption float">
+                                            Fig. 3. Floor F007 in T1/1 viewed from the south (image <br>by Mariusz Burdajewicz)
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._4._roman_floor-rgb.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 4. Floor F009 in T1/1: stone pavement(?) in the southern part, and fill of boulders to the north; view from the east (image by Mariusz Burdajewicz)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._4._roman_floor-rgb.jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 4. Floor F009 in T1/1: stone pavement(?) in the southern <br>part, and fill of boulders to the north; view from the east <br>(image by Mariusz Burdajewicz)
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+                            <p>The tentative chronological sequence in T1/1 is as follows: Roman, Byzantine-to-Early Islamic, Ayyubid-Mamluk, Mamluk, and presumably late Mamluk/early Ottoman periods.</p>
+                            <h4 class="fw-light pt-5">Trench 1/Trench 3</h4>
+                            <div class="d-flex d-md-block flex-column-reverse">
+                                <div class="figure-container-300 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end">
+                                    <figure class="figure">
+                                        <img 
+                                        src="assets/images/current_project/fig._5.-rgb.jpg" 
+                                        class="figure-img img-fluid clickable-image" 
+                                        alt="Fig. 5. Floor F071 in T1/T3, viewed from the east."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._5.-rgb.jpg">
+                                        <figcaption class="figure-caption float">Fig. 5. Floor F071 in T1/T3, viewed from the east.</figcaption>
+                                    </figure>
+                                </div>
+                                <p>
+                                    This Trench was between T1/1 in the south and the small Trench Sq3 of 2019  in the northwest. All these trenches were eventually merged into one. In T1/T3, the occupational levels were accompanied by several architectural features, sometimes blending, rendering their phasing more complicated. The uppermost earthen floor, with traces of two fireplaces, many animal bones, and hand-made pottery, including several examples of Hand-made Geometric Painted (HMGP) ware, was associated with walls constructed of boulders with a few reused architectural elements 
+                                    (<button
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#imageModal"
+                                    data-bs-image="assets/images/current_project/fig._5.-rgb.jpg"
+                                    class="badge clickable-badge"
+                                    alt="Fig. 5. Floor F071 in T1/T3, viewed from the east."
+                                    >Fig. 5</button>).
+                                </p>
+                            </div>
+                            <p>
+                                Under the uppermost level of the early Ottoman period, the next habitation level included two roughly square ‘compartments’ S14 delineated by stones in the northern part of the Trench 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._6..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 6. Floor F073 and ‘compartments’ S14, viewed from the south-east."
+                                >Fig. 6</button>)
+                                 and a tamped earth floor in the southern part. Inside the southern one of the two “compartments” S14, among burning traces, were remains of a large pithos of an exceptionally low-fired fabric. Connected with this phase (Mamluk) are abundant finds of HMGP ware and glazed ware pottery 
+                                 (<button
+                                 type="button"
+                                 data-bs-toggle="modal"
+                                 data-bs-target="#imageModal"
+                                 data-bs-image="assets/images/current_project/fig._a.jpg"
+                                 class="badge clickable-badge"
+                                 alt="Fig. A. Sample of the Mamluk-period pottery from Trench T1/T3 (image by Jolanta Młynarczyk)."
+                                 >Fig. A</button>). 
+                            </p>
+                            <p>
+                                On the northern side of S14, another earthen floor(Ayyubid-Mamluk) with a fireplace (F077) has been recorded. The stone material upon it included a limestone column base that, before having been incorporated into the wall, was reused probably as a door post or perhaps a mortarium 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._7.-rgb.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 7. Floor F077 and stone material collapsed from W08, viewed from the east."
+                                >Fig. 7</button>). 
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._6..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 6. Floor F073 and ‘compartments’ S14, viewed from the south-east."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._6..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 6. Floor F073 and ‘compartments’ S14, viewed from the <br>south-east.
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._7.-rgb.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 7. Floor F077 and stone material collapsed from W08, viewed from the east."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._7.-rgb.jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 7. Floor F077 and stone material collapsed from W08, <br>
+                                            viewed from the east.
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+                            <p>
+                                The level below the Mamluk-Ayyubid phase belonged to the Early Islamic period and included two main architectural features. The first, “Compartment” S15, is a strong box-like construction of ashlars with a frame of undressed or semi-dressed stones on the top 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._8.-rgb.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 8. ‘Compartment’ S15 with ‘clerestory wall’ S16 in the background, viewed from the southwest."
+                                >Fig. 8</button>).
+                                 Important finds from this context are a small bronze melting pot and fragments of a clay crucible, clear evidence of metal smelting. Only a few ceramics were found, apparently of an Early Islamic (Abbasid?) date 
+                                 (<button
+                                 type="button"
+                                 data-bs-toggle="modal"
+                                 data-bs-target="#imageModal"
+                                 data-bs-image="assets/images/current_project/fig._b_asp1-33.jpg"
+                                 class="badge clickable-badge"
+                                 alt="Fig. B. Sample of Early Islamic (Abbasid?) ceramics from Trench T1/T3 (image by Jolanta Młynarczyk)."
+                                 >Fig. B</button>).
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._8.-rgb.jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 8. ‘Compartment’ S15 with ‘clerestory wall’ S16 in the background, viewed from the southwest."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._8.-rgb.jpg">
+                                        <figcaption class="figure-caption float">Fig. 8. ‘Compartment’ S15 with ‘clerestory wall’ S16 in the <br>background, viewed from the southwest.</figcaption>
+                                    </figure>
+                                </div>        
+                            </div>
+                            <p>
+                                To the north, Compartment S15 abuts the “clerestory” wall with three openings (S16). The structural and chronological connection between these two constructions is unclear.
+                            </p>
+                            <p>
+                                In the southern part of this Trench, under the Early Islamic level, a fragment of a rectangular platform(?) S17 was found tightly filled with stones 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._9.-rgb.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 9. Platform(?) S17 in T1/T3, viewed from the west."
+                                >Fig. 9</button>). 
+                                Its situation in relation to surrounding structures and floors supports its early dating (Byzantine? or earlier?).
+                            </p>
+                            <div class="d-flex d-md-block flex-column-reverse">
+                                <div class="figure-container-300 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end">
+                                    <figure class="figure">
+                                        <img 
+                                        src="assets/images/current_project/fig._10._trench_1-3-rgb.jpg" 
+                                        class="figure-img img-fluid clickable-image" 
+                                        alt="Fig. 10. General view of Trenches T1/1, T1/T3, and T3 (image by Adel Wojtek Oubraham)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._10._trench_1-3-rgb.jpg">
+                                        <figcaption class="figure-caption float">Fig. 10. General view of Trenches T1/1, T1/T3, and T3 (image by Adel <i>Wojtek</i> Oubraham).</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="row justify-content-evenly">
+                                    <div class="mb-4 col-auto">
+                                        <figure class="figure " >
+                                            <img 
+                                            src="assets/images/current_project/fig._9.-rgb.jpg" 
+                                            class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                            alt="Fig. 9. Platform(?) S17 in T1/T3, viewed from the west."
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#imageModal"
+                                            data-bs-image="assets/images/current_project/fig._9.-rgb.jpg">
+                                            <figcaption class="figure-caption float">Fig. 9. Platform(?) S17 in T1/T3, viewed from the west.</figcaption>
+                                        </figure>
+                                    </div>        
+                                </div>
+                            </div>
+
+                            <p>
+                                To sum up, it seems inevitable that Trench T1/3 was an industrial area rather than a habitation one, at least during the Early Islamic period. All the Roman structures, the traces we identified within this Trench, were extensively reused throughout all the later phases. The tentative chronological sequence in trench T1/T3 is as follows: Late(?) Roman (Byzantine?) period; Early Islamic period; Ayyubid-Mamluk period; Mamluk II period; Mamluk/Ottoman period.
+                            </p>
+                            <h4 class="fw-light pt-5">Trench 2-S</h4>
+                            <!-- <div class="figure-container-300 display-no-float-md me-md-0 mx-5 py-md-0 py-3 float-md-end">
+                                <figure class="figure">
+                                    <img 
+                                    src="assets/images/current_project/fig._12..jpg" 
+                                    class="figure-img img-fluid clickable-image" 
+                                    alt="Fig. 12. Presumed habitation level (F054) in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#imageModal"
+                                    data-bs-image="assets/images/current_project/fig._12..jpg">
+                                    <figcaption class="figure-caption float">Fig. 12. Presumed habitation level (F054) in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz).</figcaption>
+                                </figure>
+                            </div> -->
+                            <p>Trench 2-S was opened on the southern side of the Roman-period arch, whose northern side was examined and stratified in 2019 (Sq2). The goal in 2023 was to study the stratigraphy in the space between the arch and the southern E-W wall of the compound. Unfortunately, this task could not have been accomplished due to the presence of dense debris of blocks collapsed from a barrel vault and walls of a large room 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._11a..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 11a. Trench 2-S: collapsed arch of the vaulted ceiling, viewed from the west (image by Jolanta Młynarczyk)."
+                                >Fig. 11a</button>, 
+                                <button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._11b..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 11b. Trench 2-S: reconstruction of the vaulted ceiling, viewed from the west (image by Adel Wojtek Oubraham and Mariusz Burdajewicz)."
+                                >Fig. 11b</button>), 
+                                apparently of the Ayyubid/Mamluk period, to judge from the pottery retrieved during its exploration. What may have been the uppermost earthen floor, F054 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._12..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 12. Presumed habitation level (F054) in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                >Fig. 12</button>), 
+                                yielded evidence of some industrial activity: several stone mortars and grinding devices, fragments of heavy coarse-ware vessels with bits of charcoal inside, and glazed pottery of the Mamluk period 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._c_asp1-33.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. C. Sample of glazed pottery of the Mamluk from Trench T2-S (image by Jolanta Młynarczyk)."
+                                >Fig. C</button>). 
+                                Among the upper part of the debris, a block with a carved cross was found 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._13a..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 13a. Trench 2-S: a block with a carved cross retrieved from the debris of Trench 2-S (image by Mariusz Burdajewicz)."
+                                >Fig. 13a</button>, 
+                                <button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._13b..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 13b. Trench 2-S: a block with a carved cross (image by Mariusz Burdajewicz)."
+                                >Fig. 13b</button>); 
+                                it is not known, however, if it was reused or <i>in situ</i>. </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._11a..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 11a. Trench 2-S: collapsed arch of the vaulted ceiling, viewed from the west (image by Jolanta Młynarczyk)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._11a..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 11a. Trench 2-S: collapsed arch of the vaulted ceiling, <br>viewed from the west (image by Jolanta Młynarczyk).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._11b..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 11b. Trench 2-S: reconstruction of the vaulted ceiling, viewed from the west (image by Adel Wojtek Oubraham and Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._11b..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 11b. Trench 2-S: reconstruction of the vaulted ceiling, viewed from the west <br>(image by Adel <i>Wojtek</i> Oubraham and Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._12..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 12. Presumed habitation level (F054) in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._12..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 12. Presumed habitation level <br>(F054) in Trench 2-S, viewed from <br>the south (image by Mariusz <br>Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._13a..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 13a. Trench 2-S: a block with a carved cross retrieved from the debris of Trench 2-S (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._13a..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 13a. Trench 2-S: a block with a carved cross retrieved from <br>the debris of Trench 2-S (image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._13b..jpg" 
+                                        class="figure-img figure-image-vert300 img-fluid clickable-image" 
+                                        alt="Fig. 13b. Trench 2-S: a block with a carved cross (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._13b..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 13b. Trench 2-S: a block with a carved cross <br>(image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+                            <p>
+                                Finally, a mosaic floor was reached and preliminarily dated to the Abbasid period in a narrow space that could have been explored between the lowest debris blocks. The mosaic was made using large white tesserae 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._14..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 14. Floor F058 in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                >Fig. 14</button>, 
+                                <button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._15..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 15. Mosaic floor F059 in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                >Fig. 15</button>). 
+                                A conservator has secured the uncovered part of the mosaic for further exploration during the next field season.
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._14..jpg" 
+                                        class="figure-img figure-image-vert400 img-fluid clickable-image" 
+                                        alt="Fig. 14. Floor F058 in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._14..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 14. Floor F058 in Trench 2-S, viewed from <br>the south (image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._15..jpg" 
+                                        class="figure-img figure-image-vert400 img-fluid clickable-image" 
+                                        alt="Fig. 15. Mosaic floor F059 in Trench 2-S, viewed from the south (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._15..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 15. Mosaic floor F059 in Trench 2-S, viewed<br>from the south (image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+
+                            <p>
+                                The tentative chronological sequence in Trench T1/T3 is as follows: early Islamic, Abbasid (perhaps into Fatimid), and Ayyubid-Mamluk periods.
+                            </p>
+                            <h4 class="fw-light pt-5">Trench 4</h4>
+                            <p>
+                                Trench 4, measuring c. 5 x 5 m, was opened on the northern side of the “Ammonite tower” to determine the date of the tower’s foundation. It reached a significant depth of 4.5m below the present-day ground level 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._16.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 16. Trench T4 viewed from the northeast (image by Mariusz Burdajewicz)."
+                                >Fig. 16</button>, 
+                                <button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._17..jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. 17. Trench T4 viewed from the northeast (image by Mariusz Burdajewicz)."
+                                >Fig. 17</button>). 
+                                However, it was filled with the construction of a buttress consisting mainly of unworked boulders built to support this particular section of the Ammonite structure where a convex deformation of its northern wall had occurred.
+                            </p>
+                            <div class="row justify-content-evenly ">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure " >
+                                        <img 
+                                        src="assets/images/current_project/fig._16.jpg" 
+                                        class="figure-img figure-image-vert400 img-fluid clickable-image" 
+                                        alt="Fig. 16. Trench T4 viewed from the northeast (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._16.jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 16. Trench T4 viewed from the northeast <br>(image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure ">
+                                        <img 
+                                        src="assets/images/current_project/fig._17..jpg" 
+                                        class="figure-img figure-image-vert400 img-fluid clickable-image" 
+                                        alt="Fig. 17. Trench T4 viewed from the northeast (image by Mariusz Burdajewicz)."
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#imageModal"
+                                        data-bs-image="assets/images/current_project/fig._17..jpg">
+                                        <figcaption class="figure-caption float">
+                                            Fig. 17. Trench T4 viewed from the northeast <br>(image by Mariusz Burdajewicz).
+                                        </figcaption>
+                                    </figure>
+                                </div>
+        
+                            </div>
+                            <p>The date of this intervention can be established based on the latest pottery forms in the repertoire of the well-known Eastern Sigillata A (ESA) ware 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._d_asp1-33.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. D. Sample of the Eastern Sigillata A ware from Trench 4, 1st century CE (Trench T4) (image by Jolanta Młynarczyk)."
+                                >Fig. D</button>). 
+                                This means that the buttress was built by the Romans around the mid-2nd century CE, possibly indicating the very period when the "Ammonite tower" was transformed into the <i>cella</i> of the temple.
+                            </p>
+                            <p>
+                                Except for the early Roman pottery, the construction of the buttress yielded an amount of Hellenistic pottery, securely dated to the 2nd century BCE 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._e_asp1-33.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. E. Sample of the Hellenistic pottery from Trench 4, 2nd century BCE, from Trench T4 (image by Jolanta Młynarczyk)."
+                                >Fig. E</button>), 
+                                and many fragments of Iron Age storage jars 
+                                (<button
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#imageModal"
+                                data-bs-image="assets/images/current_project/fig._f_asp1-33.jpg"
+                                class="badge clickable-badge"
+                                alt="Fig. F. Presumed Iron Age II pottery from Trench 4 (drawing by Mariusz Burdajewicz)."
+                                >Fig. F</button>). 
+                                All these ceramics are unstratified and dispersed throughout all the mechanical layers recorded during the exploration. Yet, they provide evidence of the occupation of the area of Khirbat as-Sar in the Iron Age II, as well as in the Hellenistic period.
+                            </p>
+                            <h4 class="fw-normal pt-5">Summary</h4>
+                            <p>
+                                The 2023 exploration results in the eastern part of the Roman-period courtyard testify to a dense habitation of the site, especially in the Middle Islamic period when the Roman structures were extensively reused. Moreover, during this season, levels of the early Islamic and late Roman/Byzantine periods were identified for the first time. The chronological sequence presented above is preliminary; its detailed phasing is rendered difficult by the repeated reuse of walls and structures of all consecutive periods attested at the site. As to the "Ammonite tower", despite the presence of several Iron Age storage jar fragments (and other ceramic forms) in the fills associated with the buttress, the exact date of its construction remains obscure.
+                            </p>
+                                                    <!-- Gallery + captions -->
+                        <h4 class="fw-light pt-5 text-center">Select pottery from Trenches T1/1, T1/3, and T3:</h4>
+                        <div class="row gallery pswp-gallery--with-caption pt-2 text-center" id="gallery--with-custom-caption">
+                            <!-- Each image wrapper is in a Bootstrap column for responsive layout -->
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._a.jpg" data-pswp-width="5184" data-pswp-height="3888" target="_blank">
+                                    <img src="assets/images/current_project/fig._a_1200.jpg" alt="Fig. A. Sample of the Mamluk-period pottery from Trench T1/T3 (image by Jolanta Młynarczyk)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. A.</b> Sample of the Mamluk-period pottery from Trench T1/T3 (image by Jolanta Młynarczyk)</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._b_asp1-33.jpg" data-pswp-width="4642" data-pswp-height="3490" target="_blank">
+                                    <img src="assets/images/current_project/fig._b_1200.jpg" alt="Fig. B. Sample of Early Islamic (Abbasid?) ceramics from Trench T1/T3 (image by Jolanta Młynarczyk)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. B.</b> Sample of Early Islamic (Abbasid?) ceramics from Trench T1/T3 (image by Jolanta Młynarczyk)
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._c_asp1-33.jpg" data-pswp-width="2934" data-pswp-height="2206" target="_blank">
+                                    <img src="assets/images/current_project/fig._c_1200.jpg" alt="Fig. C. Sample of glazed pottery of the Mamluk from Trench T2-S (image by Jolanta Młynarczyk)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. C.</b> Sample of glazed pottery of the Mamluk from Trench T2-S (image by Jolanta Młynarczyk)</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._d_asp1-33.jpg" data-pswp-width="3126" data-pswp-height="2344" target="_blank">
+                                    <img src="assets/images/current_project/fig._d_1200.jpg" alt="Fig. D. Sample of the Eastern Sigillata A ware from Trench 4, 1st century CE (Trench T4) (image by Jolanta Młynarczyk)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. D.</b> Sample of the Eastern Sigillata A ware from Trench 4, 1st century CE (Trench T4) (image by Jolanta Młynarczyk)</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._e_asp1-33.jpg" data-pswp-width="2845" data-pswp-height="2134" target="_blank">
+                                    <img src="assets/images/current_project/fig._e_1200.jpg" alt="Fig. E. Sample of the Hellenistic pottery from Trench 4, 2nd century BCE, from Trench T4 (image by Jolanta Młynarczyk)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. E.</b> Sample of the Hellenistic pottery from Trench 4, 2nd century BCE, from Trench T4 (image by Jolanta Młynarczyk)</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/current_project/fig._f_asp1-33.jpg" data-pswp-width="1656" data-pswp-height="1242" target="_blank">
+                                    <img src="assets/images/current_project/fig._f_1200.jpg" alt="Fig. F. Presumed Iron Age II pottery from Trench 4 (drawing by Mariusz Burdajewicz)" class="img-fluid">
+                                </a>
+                                <p class="py-2"><b>Fig. F.</b> Presumed Iron Age II pottery from Trench 4 (drawing by Mariusz Burdajewicz)</p>
+                            </div>
+                        </div>                        
+                    </div>
+
+
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="pt-5 mt-auto"></div>
+    </div>
+    
+    <!-- HIDDEN COMMON TEMPLATES -->
+    <!-- clickable popup modal v1.2 -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down">
+            <div class="modal-content ">
+            <div class="modal-header">
+                <h6 class="modal-title" id="imageModalLabel"></h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="zoom-container">
+                    <img id="modalImage" src="" alt="Image Preview">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF TEMPLATES -->
+
+    <!-- SCRIPTS v1.8+tooltips -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script src="assets/scripts/footer.js"></script>
+    <script src="assets/scripts/header.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
+    <script type="module" src="assets/scripts/gallery+caption.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        });
+    </script>
+
+    <!-- END OF SCRIPTS -->
+
+
+</body>
+
+</html>
