@@ -117,6 +117,10 @@
         --main-footer-logos-height: 30px;
     }
 }
+#footerMainWhiteStrip{
+    background-color: white;
+    opacity: .9;
+}
 #footer-logotypes-main{
     background-color: white;
 
