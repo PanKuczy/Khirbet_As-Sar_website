@@ -64,8 +64,8 @@
 
 .footer-main-page .img-logo{
     width: auto;
-    /* height: 60px; */
-    height: 0.5rem;
+    height: 60px;
+    /* height: 0.5rem; */
 }
 
 .content-container{
