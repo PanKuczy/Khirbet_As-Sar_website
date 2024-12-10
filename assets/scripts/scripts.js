@@ -1,6 +1,27 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-tootip-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+// SKRYPT DO WYLICZANIA WYSOKOSCI SLIDERA NA GLOWNEJ
+function adjustPhotoSliderHeight() {
+  // Check if on index.html
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+      const headerHeight = document.getElementById('header')?.offsetHeight || 0;
+      const navbarHeight = document.getElementById('navbarMain')?.offsetHeight || 0;
+      const totalHeight = headerHeight + navbarHeight;
+
+      const photoSlider = document.getElementById('photoSlider');
+      if (photoSlider) {
+          photoSlider.style.height = `calc(100vh - ${totalHeight}px)`;
+      }
+  }
+}
+
+// Adjust height on page load
+document.addEventListener('DOMContentLoaded', adjustPhotoSliderHeight);
+
+// Adjust height on window resize
+window.addEventListener('resize', adjustPhotoSliderHeight);
+
 
 // SKRYPT DO DODAWANIA NAZWY PODSTRONY DO MENU W WERSJI ZMINIMALIZOWANEJ
 // Detect the current page name from the URL, including subpages

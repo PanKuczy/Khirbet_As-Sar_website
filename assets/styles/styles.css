@@ -5,20 +5,70 @@
     --custom-danger: #F44336;
     --custom-dark: #5b5b5b; */
     --custom-dark-opacity: #4c4c4ce6;
+    --main-footer-logos-height: 60px;
 }
 
+
+#mainBody{
+    height: 100vh;
+    object-fit: cover;
+    overflow: clip;
+}
+
+/* SLIDER NA GLOWNEJ */
+#photoSlider{
+    overflow: hidden;
+}
+.slider-overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.slider-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: rgba(40, 40, 40, 0.75) 0 0 20px;
+}
+
+.slider-overlay h2 {
+    font-size: 1.5rem;
+    text-shadow: rgba(40, 40, 40, 1) 0 0 20px;
+}
+.carousel-inner{
+    height: 100%;
+}
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    height: 100%;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-indicators{
+    position: absolute;
+    bottom: 40%;
+}
+.carousel-control-prev, .carousel-control-next{
+    position: absolute;
+    top: -50%;
+}
+
+/* FOOTER I LOGA */
 #mission-logo{
     width: 50px;
     height: auto;
-    
-}
-/* #photoslider{
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-} */
-.carousel-item {
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .logoBlendDarken{
@@ -41,9 +91,6 @@
     max-width: fit-content;
 }
 
-
-
-
 .img-logo{
     width: auto;
     height: 60px;
@@ -53,20 +100,64 @@
     transition: margin-bottom 0.3s;
 }
 
-/* NAGŁOWEK NA GŁÓWNEJ */
+/* FOOTER NA GŁÓWNEJ */
+@media (max-width: 960px) {
+    :root {
+        --main-footer-logos-height: 50px;
+    }
+}
+@media (max-width: 800px) {
+    :root {
+        --main-footer-logos-height: 40px;
+    }
+}
+
+@media (max-width: 516px) {
+    :root {
+        --main-footer-logos-height: 30px;
+    }
+}
+#footer-logotypes-main{
+    background-color: white;
+
+}
+#footer-logotypes-main div{
+    height: var(--main-footer-logos-height);
+    max-width: fit-content;
+}
 .footer-main-page{
     position: sticky;
     bottom: 0;
 }
-.footer-main-page .row{
-    background-color: #fff;
+.footer-main-page .separatorHorizontalWhite{
+    background-color: white;
+    height: 0.05rem;
+    opacity: 0.75;
+    margin-bottom: 0.25rem;
 }
 
-.footer-main-page .img-logo{
+/* .mainFooterLogoContainer{
+    height: var(--main-footer-logos-height);
+    width: 100%; 
+    position: relative; 
+} 
+WYGLĄDA NA TO ZE MOZNA SKASOWAC?    
+*/
+
+.mainFooterLogoContainer img{
+    height: var(--main-footer-logos-height);
+    z-index: 1500;
     width: auto;
-    height: 60px;
-    /* height: 0.5rem; */
+    /* object-fit: fill; */
+    /* object-position: center;  */
+    /* TO CHYBA TEZ NIE WPLYWA */
+   
 }
+.mainFooterLogoContainer img:hover{
+    margin-bottom: 10px;
+    transition: margin-bottom 0.3s;
+}
+
 
 .content-container{
     min-height: 100vh;
@@ -254,7 +345,15 @@ display: none;
 
 
 /* IMAGES */
-img {
+/* img {
+    display: block;
+    width: 100%;
+    height: auto;
+}  
+BACKUP - ZMIENIONE BO CHYBA ZBYT OGOLNE I W SRODKU PLIKU ZAMIAST NA POCZATKU. 
+DALEM KOPIE TEGO PONIZEJ ZAWEZONE DO FIGURE */
+
+figure img {
     display: block;
     width: 100%;
     height: auto;
