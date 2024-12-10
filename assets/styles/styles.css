@@ -158,6 +158,11 @@ WYGLĄDA NA TO ZE MOZNA SKASOWAC?
     transition: margin-bottom 0.3s;
 }
 
+#footerInfoStrip{
+    background-color: var(--custom-dark-opacity);
+}
+
+/* KONIEC FOOTERA MAIN */
 
 .content-container{
     min-height: 100vh;
