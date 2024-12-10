@@ -40,13 +40,10 @@
     height: 60px;
     max-width: fit-content;
 }
-.footer-main-page{
-    position: sticky;
-    bottom: 0;
-}
-.footer-main-page .row{
-    background-color: #fff;
-}
+
+
+
+
 .img-logo{
     width: auto;
     height: 60px;
@@ -54,6 +51,21 @@
 .img-logo:hover{
     margin-bottom: 10px;
     transition: margin-bottom 0.3s;
+}
+
+/* NAGŁOWEK NA GŁÓWNEJ */
+.footer-main-page{
+    position: sticky;
+    bottom: 0;
+}
+.footer-main-page .row{
+    background-color: #fff;
+}
+
+.footer-main-page .img-logo{
+    width: auto;
+    /* height: 60px; */
+    height: 0.5rem;
 }
 
 .content-container{
@@ -416,6 +428,7 @@ figcaption {
 .figure img {
     border-radius: 0px;
     box-shadow: none;
+    border: 0.05em solid black;
 }
   
 .pswp {
