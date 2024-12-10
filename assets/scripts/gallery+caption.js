@@ -10,7 +10,7 @@ lightbox.on('uiRegister', function() {
   lightbox.pswp.ui.registerElement({
     name: 'custom-caption',
     order: 9,
-    isButton: false,
+    // isButton: false,
     appendTo: 'root',
     html: 'Caption text',
     onInit: (el, pswp) => {
@@ -24,7 +24,9 @@ lightbox.on('uiRegister', function() {
             captionHTML = hiddenCaption.innerHTML;
           } else {
             // get caption from alt attribute
-            captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+            // captionHTML = currSlideElement.querySelector('img').getAttribute('alt'); BAKUP
+            captionHTML = currSlideElement.querySelector('img, button').getAttribute('alt');
+
           }
         }
         el.innerHTML = captionHTML || '';

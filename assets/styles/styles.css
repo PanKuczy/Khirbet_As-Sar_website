@@ -19,7 +19,22 @@
 } */
 .carousel-item {
     transition: transform 0.5s ease, opacity 0.5s ease;
-  }
+}
+
+.logoBlendDarken{
+    mix-blend-mode: darken;
+    width: 100%;
+    height: auto;
+}
+.logoBlendDarken:hover{
+    margin-bottom: 10px;
+    opacity: 75%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#jumbotronCurrentProject{
+    mix-blend-mode: darken;
+}
 
 #footer-logotypes div{
     height: 60px;
@@ -261,6 +276,10 @@ figcaption {
     display: inline-block;
 }
  /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION */
+ .figure-image-vert500{
+    max-height: 500px;
+    width: auto;
+}
  .figure-image-vert400{
     max-height: 400px;
     width: auto;
@@ -315,7 +334,7 @@ figcaption {
         max-width: 100%;
         margin: 0 auto;
     }
-    .figure-image-vert200, .figure-image-vert300, .figure-image-vert400 {
+    .figure-image-vert200, .figure-image-vert300, .figure-image-vert400, .figure-image-vert500 {
         max-height: none;
     }
     #exploration-fig3-float{
@@ -393,6 +412,10 @@ figcaption {
 .gallery img {
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.figure img {
+    border-radius: 0px;
+    box-shadow: none;
 }
   
 .pswp {
