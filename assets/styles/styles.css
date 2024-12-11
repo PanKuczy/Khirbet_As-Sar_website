@@ -65,11 +65,29 @@
     top: -50%;
 }
 
-/* FOOTER I LOGA */
-#mission-logo{
-    width: 50px;
-    height: auto;
+/* HEADERS */
+
+.headerBackgroundPattern{
+    background-color: #853b23;
+    /* WYWALIĆ W PRODUKCJI TEN URL Z ../../  */
+    /* background-image: url("/assets/images/pat_arabic2.svg"); */
+    background-image: url("../../assets/images/pat_arabic2.svg");
+    background-attachment: fixed;
 }
+
+header h1{
+    text-shadow: rgba(40, 40, 40, 1) 1px 1px 5px;
+}
+header h3{
+    text-shadow: rgba(30, 30, 30, 1) 1px 1px 5px;
+}
+#mission-logo{
+    width: 64px;
+    height: auto;
+    text-shadow: rgba(30, 30, 30, 1) 1px 1px 5px;
+}
+
+/* FOOTER I LOGA */
 
 .logoBlendDarken{
     mix-blend-mode: darken;
@@ -253,6 +271,9 @@ display: none;
 }
 
 /* NAVBAR */
+.navbar{
+    box-shadow: 0px 0px 15px rgba(40, 40, 40, 0.75);
+}
 .bg-dark-opacity{
     background-color: var(--custom-dark-opacity);
 }
@@ -617,12 +638,3 @@ blockquote > p > cite {
 
 }
 
-/* SVG PATTERNS */
-
-.headerBackgroundPattern{
-    background-color: #853b23;
-    /* WYWALIĆ W PRODUKCJI TEN URL Z ../../  */
-    /* background-image: url("/assets/images/pat_arabic2.svg"); */
-    background-image: url("../../assets/images/pat_arabic2.svg");
-    background-attachment: fixed;
-}
