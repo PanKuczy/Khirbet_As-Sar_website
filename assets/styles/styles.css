@@ -6,6 +6,7 @@
     --custom-dark: #5b5b5b; */
     --custom-dark-opacity: #4c4c4ce6;
     --main-footer-logos-height: 60px;
+    --custom-primary-lighter: #874834;
 }
 
 
@@ -157,22 +158,10 @@ header h3{
     margin-bottom: 0.25rem;
 }
 
-/* .mainFooterLogoContainer{
-    height: var(--main-footer-logos-height);
-    width: 100%; 
-    position: relative; 
-} 
-WYGLĄDA NA TO ZE MOZNA SKASOWAC?    
-*/
-
 .mainFooterLogoContainer img{
     height: var(--main-footer-logos-height);
     z-index: 1500;
     width: auto;
-    /* object-fit: fill; */
-    /* object-position: center;  */
-    /* TO CHYBA TEZ NIE WPLYWA */
-   
 }
 .mainFooterLogoContainer img:hover{
     margin-bottom: 10px;
@@ -373,16 +362,6 @@ display: none;
     animation-name: slideIn;
   }
 
-
-/* IMAGES */
-/* img {
-    display: block;
-    width: 100%;
-    height: auto;
-}  
-BACKUP - ZMIENIONE BO CHYBA ZBYT OGOLNE I W SRODKU PLIKU ZAMIAST NA POCZATKU. 
-DALEM KOPIE TEGO PONIZEJ ZAWEZONE DO FIGURE */
-
 figure img {
     display: block;
     width: 100%;
@@ -416,12 +395,12 @@ figcaption {
 .figure{
     display: inline-block;
 }
- /* ^TEMP WYLACZYLEM DO TESTOW W EXPLORATION */
- .figure-image-vert500{
+
+.figure-image-vert500{
     max-height: 500px;
     width: auto;
 }
- .figure-image-vert400{
+.figure-image-vert400{
     max-height: 400px;
     width: auto;
 }
@@ -501,7 +480,6 @@ figcaption {
     }
 }
 #exploration-fig3{
-    /* width: 100%; */
     display: flexbox;
 }
 
