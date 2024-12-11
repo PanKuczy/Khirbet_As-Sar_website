@@ -190,7 +190,8 @@ WYGLĄDA NA TO ZE MOZNA SKASOWAC?
 }
 
 .staff-image{
-    width: 40%;
+    width: 60%;
+    max-width: 280px;
     align-content: center;
     align-items: center;
 }
