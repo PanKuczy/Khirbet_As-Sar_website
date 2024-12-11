@@ -77,7 +77,6 @@
     height: auto;
 }
 .logoBlendDarken:hover{
-    margin-bottom: 10px;
     opacity: 75%;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -616,4 +615,12 @@ blockquote > p > cite {
     margin-top: 1.1em;
     letter-spacing: 0;
 
+}
+
+/* SVG PATTERNS */
+
+.headerBackgroundPattern{
+    background-color: #853b23;
+    background-image: url("/assets/images/pat_arabic2.svg");
+    background-attachment: fixed;
 }
