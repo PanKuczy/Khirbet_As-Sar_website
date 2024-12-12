@@ -4,16 +4,19 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 // SCRIPT FOR CALCULATING THE HEIGHT OF THE MAIN PAGE SLIDER
 function adjustPhotoSliderHeight() {
-  // Check if on index.html
-  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-      const headerHeight = document.getElementById('header')?.offsetHeight || 0;
-      const navbarHeight = document.getElementById('navbarMain')?.offsetHeight || 0;
-      const totalHeight = headerHeight + navbarHeight;
+  // Get the current pathname
+  const pathname = window.location.pathname;
 
-      const photoSlider = document.getElementById('photoSlider');
-      if (photoSlider) {
-          photoSlider.style.height = `calc(100vh - ${totalHeight}px)`;
-      }
+  // Check if the pathname is 'index.html' or the root ('/')
+  if (pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/')) {
+    const headerHeight = document.getElementById('header')?.offsetHeight || 0;
+    const navbarHeight = document.getElementById('navbarMain')?.offsetHeight || 0;
+    const totalHeight = headerHeight + navbarHeight;
+
+    const photoSlider = document.getElementById('photoSlider');
+    if (photoSlider) {
+      photoSlider.style.height = `calc(100vh - ${totalHeight}px)`;
+    }
   }
 }
 
