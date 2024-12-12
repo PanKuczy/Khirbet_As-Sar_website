@@ -4,6 +4,9 @@
 /layouts/snippets.html
 /backup
 
+#vs-code settings
+/.vscode
+
 #OS db
 *.XnViewSort
 
