@@ -519,7 +519,7 @@ figcaption {
 .figure img {
     border-radius: 0px;
     box-shadow: none;
-    border: 0.05em solid black;
+    border: 0.05em solid #8a8a8a;
 }
   
 .pswp {
