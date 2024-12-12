@@ -1,7 +1,8 @@
+// BOOTSTRAP TOOLTIPS
 const tooltipTriggerList = document.querySelectorAll('[data-bs-tootip-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-// SKRYPT DO WYLICZANIA WYSOKOSCI SLIDERA NA GLOWNEJ
+// SCRIPT FOR CALCULATING THE HEIGHT OF THE MAIN PAGE SLIDER
 function adjustPhotoSliderHeight() {
   // Check if on index.html
   if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
@@ -23,21 +24,20 @@ document.addEventListener('DOMContentLoaded', adjustPhotoSliderHeight);
 window.addEventListener('resize', adjustPhotoSliderHeight);
 
 
-// SKRYPT DO DODAWANIA NAZWY PODSTRONY DO MENU W WERSJI ZMINIMALIZOWANEJ
+// SCRIPT FOR REPLACING THE NAVBAR BRAND NAME IN MINIMIZED MENU
 // Detect the current page name from the URL, including subpages
 const navLinks = document.querySelectorAll('.nav-link');
 const currentPath = window.location.pathname.split('/').pop() || 'index.html'; // Default to 'index.html'
 const navbarBrand = document.getElementById('navbarBrand');
 
 navLinks.forEach(link => {
-  // If the link href matches the current path, mark it as active and set the brand text
+  // If the link href matches the current path set the brand text
   if (link.getAttribute('href').endsWith(currentPath)) {
-    // link.classList.add('active'); CHYBA NIEPOTRZEBNE A PSUJE ROZWIJANE MENU
     navbarBrand.textContent = link.textContent; // Set brand to the active link's text
   }
 });
 
-// SKRYPT DO SEARCH'a
+// SEARCH ENGINE SCRIPT
 // Handle search form submission
 function handleSearch(event) {
   event.preventDefault(); // Prevent the form from reloading the page
