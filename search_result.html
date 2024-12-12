@@ -110,15 +110,14 @@
 
 
     <script>
-      // Create the FlexSearch index with options for flexible matching
       const index = new FlexSearch.Document({
         document: {
           id: "id",
           index: ["title", "section", "content"], // Index title, section, and content
           store: ["title", "section", "content", "url"], // Store fields for results display
         },
-        tokenize: "full", // Tokenize the whole content (ensure we get complete words)
-        suggest: false, // Allow for fuzzy or approximate matching
+        tokenize: "full",
+        suggest: false,
       });
 
       let dataLoaded = false;
@@ -195,7 +194,7 @@
 
       // Handle search form submission
       function handleSearch(event) {
-        if (event) event.preventDefault(); // Prevent form submission default behavior
+        if (event) event.preventDefault();
 
         const query = document.getElementById("searchInput").value.trim();
         if (!query) {
@@ -222,10 +221,9 @@
       }
     </script>
 
-        <!-- SCRIPTS v1.7 -->
+        <!-- SCRIPTS v1.8 -->
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
         <script src="assets/scripts/footer.js"></script>
         <script src="assets/scripts/header.js"></script>
         <script src="assets/scripts/scripts.js"></script>
