@@ -5,7 +5,9 @@
 /backup
 
 #vs-code settings
+.vscode/
 /.vscode
+.vscode/*
 
 #OS db
 *.XnViewSort
