@@ -168,7 +168,7 @@
             const resultItems = result.result.flat();
             resultItems.forEach((item) => {
               const resultElement = document.createElement("div");
-              resultElement.classList.add("result-item", "card", "my-3");
+              resultElement.classList.add("result-item", "card", "bg-light", "my-3");
               // Truncate content to the first 25 words
               const truncatedContent = item.doc.content.split(" ").slice(0, 25).join(" ") + "...";
               const truncatedSection = item.doc.section.slice(0, -37);                
