@@ -1,586 +1,297 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <!-- HEAD v1.91+photoswipe -->
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>
-      Conservation and Public Archaeology - Khirbet es-Sar Excavations Project
-    </title>
-    <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
-    <script>
-      const isLocal =
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1";
-      const baseTag = document.createElement("base");
-      baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
-      document.head.appendChild(baseTag);
-    </script>
-    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
-    <link href="assets/styles/custom.min.css" rel="stylesheet" />
-    <link href="assets/styles/styles.css" rel="stylesheet" />
-    <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" />
-    <link
-      href="https://www.unpkg.com/photoswipe@5.4.4/dist/photoswipe.css"
-      rel="stylesheet"
-    />
-    <script defer="" src="assets/fontawesome/sharp-solid.js"></script>
-    <script defer="" src="assets/fontawesome/solid.js"></script>
-    <script defer="" src="assets/fontawesome/js/fontawesome.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
-  </head>
-  <body>
+    <head>
+        <!-- HEAD v1.91+photoswipe -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conservation and Public Archaeology - Khirbet es-Sar Excavations Project</title>
+        <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
+        <script> 
+          const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+          const baseTag = document.createElement("base");
+          baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
+          document.head.appendChild(baseTag);
+        </script>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link href="assets/styles/custom.min.css" rel="stylesheet">
+        <link href="assets/styles/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="https://www.unpkg.com/photoswipe@5.4.4/dist/photoswipe.css">
+        <script defer src="assets/fontawesome/sharp-solid.js"></script>
+        <script defer src="assets/fontawesome/solid.js"></script>
+        <script defer src="assets/fontawesome/js/fontawesome.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
+      
+    </head>
+
+<body>
     <div class="container-fluid min-vh-100 d-flex flex-column px-0">
-      <div id="header"></div>
-      <div class="container-fluid pt-0 mx-0 px-0">
-        <!-- NAVBAR v2.4 -->
-        <nav
-          class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand text-wrap" href="#" id="navbarBrand">Brand</a>
-            <button
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-              data-bs-target="#navbarNav"
-              data-bs-toggle="collapse"
-              type="button"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="col-xl-1 d-flex"></div>
-              <ul
-                class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0"
-              >
-                <li class="nav-item">
-                  <a
-                    class="nav-link px-0 d-flex align-items-center position-relative"
-                    href="index.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-sharp fa-solid fa-house"></i
-                    ></span>
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link px-0 d-flex align-items-center position-relative"
-                    href="site.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-sharp fa-solid fa-map"></i
-                    ></span>
-                    Site
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link px-0 d-flex align-items-center position-relative"
-                    href="exploration.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-sharp fa-solid fa-compass"></i
-                    ></span>
-                    Exploration
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    aria-expanded="false"
-                    class="nav-link dropdown-toggle px-0 d-flex align-items-center position-relative nav-item-active active"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    role="button"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-sharp fa-solid fa-shovel"></i></span
-                    >Current Project
-                  </a>
-                  <ul
-                    class="dropdown-menu mt-2 dropdown-menu-dark bg-dark-opacity animate slideIn"
-                  >
-                    <li id="li-19">
-                      <a
-                        class="dropdown-item nav-link px-3 py-2"
-                        href="current_project_2023.html"
-                      >
-                        Current Project 2023</a
-                      >
-                    </li>
-                    <li id="li-20">
-                      <a
-                        class="dropdown-item nav-link px-3 py-2"
-                        href="current_project_2024.html"
-                      >
-                        Current Project 2024</a
-                      >
-                    </li>
-                    <li id="li-21">
-                      <a
-                        aria-current="page"
-                        class="dropdown-item nav-link px-3 py-2 nav-item-active"
-                        href="conservation_and_public_archaeology.html"
-                      >
-                        Conservation and Public Archaeology</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link px-0 d-flex align-items-center position-relative"
-                    href="staff.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-solid fa-users"></i
-                    ></span>
-                    Staff
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link px-0 d-flex align-items-center position-relative"
-                    href="gallery.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-sharp fa-solid fa-image"></i
-                    ></span>
-                    Gallery
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative"
-                    href="publications.html"
-                  >
-                    <span class="nav-icon"
-                      ><i class="fa-solid fa-book-open"></i
-                    ></span>
-                    Publications
-                  </a>
-                </li>
-              </ul>
-              <form class="d-flex" onsubmit="handleSearch(event)">
-                <input
-                  aria-label="Search"
-                  class="form-control me-2"
-                  id="searchInput"
-                  placeholder="Search"
-                  type="search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-              <div class="col-xl-1 d-flex"></div>
+        <div id="header"></div>
+        <div class="container-fluid pt-0 mx-0 px-0">  
+            <!-- NAVBAR v2.5 -->
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-wrap" id="navbarBrand" href="#">Brand</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="col-xl-1 d-flex"></div>
+                        <ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-map"></i></span> Site
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="exploration.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Exploration
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                              <a class="nav-link dropdown-toggle px-0 d-flex align-items-center position-relative nav-item-active active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                  <span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span>Current Project
+                                </a>
+                                <ul class="dropdown-menu mt-2 dropdown-menu-dark bg-dark-opacity animate slideIn">
+                                    <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2023.html">
+                                        Current Project 2023</a></li>
+                                    <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2024.html">
+                                        Current Project 2024</a></li>
+                                                                            <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2025.html">
+                                        Current Project 2025</a></li>
+                                    <li><a class="dropdown-item nav-link px-3 py-2 nav-item-active" aria-current="page" href="conservation_and_public_archaeology.html">
+                                        Conservation and Public Archaeology</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="staff.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" onsubmit="handleSearch(event)">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <div class="col-xl-1 d-flex"></div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- CONTENT -->
+            <div class="container pt-3">
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+
+                        <h2 class="fs-1 text-center py-4">Conservation work and Public Archaeology</h2>
+                        <h2>Conservation</h2>
+                        <p>
+                            Apart from conducting an archaeological dig, the current project will pay special attention to protecting cultural heritage of Khirbat as-Sar. The state of preservation of exposed architectural remains and any surface finishes (e.g., wall plasters and mosaics, if found) will be assessed, and the immediate environmental threats to the uncovered architectural features will be identified. This activity will serve as the basis for final conservation expertise with a proposal for a long-term preservation program that will be presented to the DoA.
+                        </p>
+
+                        <h4 class="fw-light pt-3">State of preservation and threat assessment of the site</h4>
+                        <p>
+                            The purpose of the conservator investigation in 2023, conducted by Dr. Julia Burdajewicz (Faculty of Conservation and Restoration of Works of Art, Academy of Fine Arts in Warsaw),  was to prepare a report assessing the state of preservation of the Khirbat as-Sar archaeological site and identify the principal types and causes of natural and anthropogenic threats responsible for its condition. The report presented to the DoA included the recommendations for maintaining and preserving the site by managing the present and potential deterioration factors.
+                        </p>
+                        <p>
+                            In the 2024 season, the conservator's activity focused on assessing the current state of preservation of the Khirbat as-Sar site in light of the principal types of deterioration phenomena, with a special emphasis on changes or damages that occurred since the 2023 season.
+                        </p>
+
+                        <h4 class="fw-light pt-3">Conservation of floor mosaic</h4>
+                        <p class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                            In 2023, a patch of floor mosaic was found in trench T2-S. It was treated and reburied 
+                            (<span class="pswp-gallery__item"><a 
+                                href="assets/images/conservation_and_public_archaeology/fig._1._julka.jpg" data-pswp-width="4000" data-pswp-height="2992" target="_blank"><button
+                                    class="badge clickable-badge"
+                                    alt="Fig. 1. Trench T2-S. Working on mosaic protection, 2023 (image by Mariusz Burdajewicz).">Fig. 1</button></a></span> and 
+                            <span class="pswp-gallery__item"><a 
+                                href="assets/images/conservation_and_public_archaeology/fig._2._julka.jpg" data-pswp-width="3360" data-pswp-height="2437" target="_blank"><button
+                                    class="badge clickable-badge"
+                                    alt="Fig. 2. Trench T2-S. The mosaic after the application of mortar bands and cleaning, before reburial, 2023 (image by Julia Burdajewicz).">Fig. 2</button></a></span>). 
+                            In the following season, the trench was slightly expanded, and the eastern and western edge of the mosaic was unearthed 
+                            (<span class="pswp-gallery__item"><a 
+                                href="assets/images/conservation_and_public_archaeology/fig._3._julka.jpg" data-pswp-width="1054" data-pswp-height="820" target="_blank"><button
+                                    class="badge clickable-badge"
+                                    alt="Fig. 3. Unearthing of the mosaic in trench T2-S one year since its discovery, 2024 (image by Julia Burdajewicz).">Fig. 3</button></a></span>). 
+                            The reburial technique employed in the 2023 season turned out to be very efficient. The previously discovered and treated part of the mosaic remained in good condition and was relatively clean. It was thoroughly inspected once the secondary soil was removed entirely. All mortar bands applied in 2023 remained stable and coherent. No new losses or disintegrated edges were noted within the previously treated area. Conservation treatments were carried out in order to stabilize the condition of the newly discovered parts of the mosaic. At the end of the 2024 season, the mosaic was covered with the same synthetic sturdy mat as the previous year and reburied with a thick layer of soil (80-90 cm) 
+                            (<span class="pswp-gallery__item"><a 
+                                href="assets/images/conservation_and_public_archaeology/fig._4._julka.jpg" data-pswp-width="902" data-pswp-height="1087" target="_blank"><button
+                                    class="badge clickable-badge"
+                                    alt="Fig. 4. The mosaic after the application of mortar bands and cleaning, before reburial, 2024 (image by Julia Burdajewicz).">Fig. 4</button></a></span>).
+                        </p>
+
+                        <div class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                            <div class="row justify-content-evenly">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._1._julka.jpg" data-pswp-width="4000" data-pswp-height="2992" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._1._julka_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 1. Trench T2-S. Working on mosaic protection, 2023 (image by Mariusz Burdajewicz)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 1. Trench T2-S. Working on mosaic protection, 2023 (image <br class="d-none d-md-block">by Mariusz Burdajewicz). 
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._2._julka.jpg" data-pswp-width="3360" data-pswp-height="2437" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._2._julka_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 2. Trench T2-S. The mosaic after the application of mortar bands and cleaning, before reburial, 2023 (image by Julia Burdajewicz)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 2. Trench T2-S. The mosaic after the application of <br class="d-none d-md-block">mortar bands and cleaning, before reburial, 2023 (image by Julia <br class="d-none d-md-block">Burdajewicz). 
+                                        </figcaption>
+                                    </figure>
+                                </div> 
+    
+                            </div>                            
+                            <div class="row justify-content-evenly">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._3._julka.jpg" data-pswp-width="1054" data-pswp-height="820" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._3._julka_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 3. Unearthing of the mosaic in trench T2-S one year since its discovery, 2024 (image by Julia Burdajewicz)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 3. Unearthing of the mosaic in trench T2-S one year since <br class="d-none d-md-block">its discovery, 2024 (image by Julia Burdajewicz). 
+                                        </figcaption>
+                                    </figure>
+                                </div> 
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._4._julka.jpg" data-pswp-width="902" data-pswp-height="1087" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._4._julka_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 4. The mosaic after the application of mortar bands and cleaning, before reburial, 2024 (image by Julia Burdajewicz)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 4. The mosaic after the application <br class="d-none d-md-block">of mortar bands and cleaning, before <br class="d-none d-md-block">reburial, 2024 (image by Julia <br class="d-none d-md-block">Burdajewicz). 
+                                        </figcaption>
+                                    </figure>
+                                </div>   
+    
+                            </div>                        
+                        </div>
+
+                        <h2 class="pt-3">Public Archaeology</h2>
+                        <div class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                            <p>
+                                The community outreach program implemented during the project will enhance understanding the local population's attitudes towards their heritage. It may be possible to collect potential information on unrecorded (clandestine) archaeological findings in the vicinity of the site, as well as on the oral traditions and legends connected with the site. Another benefit of such an approach is the cooperation and relationship-building with the local community achieved through public archaeology. The engagement of the local community may enhance the protection and preservation of the discovered cultural heritage of the area.
+                            </p>
+                            <p>
+                                The first step in the 2023 season was to conduct social research (by Dr. Katarzyna Radziwiłko). Interviews were conducted with people of both genders 
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/conservation_and_public_archaeology/fig._1_radziwilko.jpg" data-pswp-width="5184" data-pswp-height="3888" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 1. Interview with one of the local workers, 2023 (image by Jolanta Młynarczyk).">Fig. 1</button></a></span>). 
+                                Among the respondents were excavation workers, shepherds, field owners, vendors/owners of nearby stores, and students. Interviews were conducted in Arabic and simultaneously translated into English with the DoA Representative, Mrs. Hana Lafi, acting as interpreter. The main objective of the interviews was to obtain answers to topics related to the historical and cultural heritage and its protection, as well as to prospective development of the site for tourist purposes. The conducted research was the first step to creating an action plan involving the local community to protect their historical heritage.
+                            </p>
+                            <p>
+                                In addition, thanks to the assistance of Mrs. Hanadi Al-Taher of the SCHEP, the first "open day" was held at the excavation site, to which the local community was invited. During this event, the visitors were familiarized with the history of the site and the methodology of excavations 
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/conservation_and_public_archaeology/fig._2_radziwilko.jpg" data-pswp-width="1024" data-pswp-height="768" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk introduces guests to ceramic finds (image by Katarzyna Radziwiłko).">Fig. 2</button></a></span>).
+                            </p>
+                            <p>
+                                In the 2024 season, another "open day" was organized on-site with the support of Mrs. Hanadi Al-Taher. We hosted members of the local community and explained to them the history and importance of the site of Khirbat as-Sar.
+                            </p>
+                        </div>
+
+                        <div class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                            <div class="row justify-content-evenly">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._1_radziwilko.jpg" data-pswp-width="5184" data-pswp-height="3888" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._1_radziwilko_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 1. Interview with one of the local workers, 2023 (image by Jolanta Młynarczyk)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 1. Interview with one of the local workers, 2023 (image by <br class="d-none d-md-block">Jolanta Młynarczyk). 
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/conservation_and_public_archaeology/fig._2_radziwilko.jpg" data-pswp-width="1024" data-pswp-height="768" target="_blank">
+                                                <img 
+                                                src="assets/images/conservation_and_public_archaeology/fig._2_radziwilko_516.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid" 
+                                                alt="Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk introduces guests to ceramic finds (image by Katarzyna Radziwiłko)." >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk introduces <br class="d-none d-md-block">guests to ceramic finds (image by Katarzyna Radziwiłko). 
+                                        </figcaption>
+                                    </figure>
+                                </div> 
+    
+                            </div>                            
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
-          </div>
-        </nav>
-        <!-- CONTENT -->
-        <div class="container pt-3">
-          <div class="row">
-            <div class="col-md-12 pt-3">
-              <h2 class="fs-1 text-center py-4" id="section-1">
-                Conservation work and Public Archaeology
-              </h2>
-              <h2 id="section-2">Conservation</h2>
-              <p id="paragraph-6">
-                Apart from conducting an archaeological dig, the current project
-                will pay special attention to protecting cultural heritage of
-                Khirbat as-Sar. The state of preservation of exposed
-                architectural remains and any surface finishes (e.g., wall
-                plasters and mosaics, if found) will be assessed, and the
-                immediate environmental threats to the uncovered architectural
-                features will be identified. This activity will serve as the
-                basis for final conservation expertise with a proposal for a
-                long-term preservation program that will be presented to the
-                DoA.
-              </p>
-              <h4 class="fw-light pt-3" id="section-3">
-                State of preservation and threat assessment of the site
-              </h4>
-              <p id="paragraph-7">
-                The purpose of the conservator investigation in 2023, conducted
-                by Dr. Julia Burdajewicz (Faculty of Conservation and
-                Restoration of Works of Art, Academy of Fine Arts in Warsaw),
-                 was to prepare a report assessing the state of preservation of
-                the Khirbat as-Sar archaeological site and identify the
-                principal types and causes of natural and anthropogenic threats
-                responsible for its condition. The report presented to the DoA
-                included the recommendations for maintaining and preserving the
-                site by managing the present and potential deterioration
-                factors.
-              </p>
-              <p id="paragraph-8">
-                In the 2024 season, the conservator's activity focused on
-                assessing the current state of preservation of the Khirbat
-                as-Sar site in light of the principal types of deterioration
-                phenomena, with a special emphasis on changes or damages that
-                occurred since the 2023 season.
-              </p>
-              <h4 class="fw-light pt-3" id="section-4">
-                Conservation of floor mosaic
-              </h4>
-              <p
-                class="gallery pswp-gallery--with-caption"
-                id="gallery--with-custom-caption"
-              >
-                In 2023, a patch of floor mosaic was found in trench T2-S. It
-                was treated and reburied (<span class="pswp-gallery__item"
-                  ><a
-                    data-pswp-height="2992"
-                    data-pswp-width="4000"
-                    href="assets/images/conservation_and_public_archaeology/fig._1._julka.jpg"
-                    target="_blank"
-                    ><button
-                      alt="Fig. 1. Trench T2-S. Working on mosaic protection, 2023 (image by Mariusz Burdajewicz)."
-                      class="badge clickable-badge"
-                    >
-                      Fig. 1
-                    </button></a
-                  ></span
-                >
-                and
-                <span class="pswp-gallery__item"
-                  ><a
-                    data-pswp-height="2437"
-                    data-pswp-width="3360"
-                    href="assets/images/conservation_and_public_archaeology/fig._2._julka.jpg"
-                    target="_blank"
-                    ><button
-                      alt="Fig. 2. Trench T2-S. The mosaic after the application of mortar bands and cleaning, before reburial, 2023 (image by Julia Burdajewicz)."
-                      class="badge clickable-badge"
-                    >
-                      Fig. 2
-                    </button></a
-                  ></span
-                >). In the following season, the trench was slightly expanded,
-                and the eastern and western edge of the mosaic was unearthed
-                (<span class="pswp-gallery__item"
-                  ><a
-                    data-pswp-height="820"
-                    data-pswp-width="1054"
-                    href="assets/images/conservation_and_public_archaeology/fig._3._julka.jpg"
-                    target="_blank"
-                    ><button
-                      alt="Fig. 3. Unearthing of the mosaic in trench T2-S one year since its discovery, 2024 (image by Julia Burdajewicz)."
-                      class="badge clickable-badge"
-                    >
-                      Fig. 3
-                    </button></a
-                  ></span
-                >). The reburial technique employed in the 2023 season turned
-                out to be very efficient. The previously discovered and treated
-                part of the mosaic remained in good condition and was relatively
-                clean. It was thoroughly inspected once the secondary soil was
-                removed entirely. All mortar bands applied in 2023 remained
-                stable and coherent. No new losses or disintegrated edges were
-                noted within the previously treated area. Conservation
-                treatments were carried out in order to stabilize the condition
-                of the newly discovered parts of the mosaic. At the end of the
-                2024 season, the mosaic was covered with the same synthetic
-                sturdy mat as the previous year and reburied with a thick layer
-                of soil (80-90 cm) (<span class="pswp-gallery__item"
-                  ><a
-                    data-pswp-height="1087"
-                    data-pswp-width="902"
-                    href="assets/images/conservation_and_public_archaeology/fig._4._julka.jpg"
-                    target="_blank"
-                    ><button
-                      alt="Fig. 4. The mosaic after the application of mortar bands and cleaning, before reburial, 2024 (image by Julia Burdajewicz)."
-                      class="badge clickable-badge"
-                    >
-                      Fig. 4
-                    </button></a
-                  ></span
-                >).
-              </p>
-              <div
-                class="gallery pswp-gallery--with-caption"
-                id="gallery--with-custom-caption"
-              >
-                <div class="row justify-content-evenly">
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="2992"
-                          data-pswp-width="4000"
-                          href="assets/images/conservation_and_public_archaeology/fig._1._julka.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 1. Trench T2-S. Working on mosaic protection, 2023 (image by Mariusz Burdajewicz)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._1._julka_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-13"
-                      >
-                        Fig. 1. Trench T2-S. Working on mosaic protection, 2023
-                        (image <br class="d-none d-md-block" />by Mariusz
-                        Burdajewicz).
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="2437"
-                          data-pswp-width="3360"
-                          href="assets/images/conservation_and_public_archaeology/fig._2._julka.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 2. Trench T2-S. The mosaic after the application of mortar bands and cleaning, before reburial, 2023 (image by Julia Burdajewicz)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._2._julka_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-14"
-                      >
-                        Fig. 2. Trench T2-S. The mosaic after the application of
-                        <br class="d-none d-md-block" />mortar bands and
-                        cleaning, before reburial, 2023 (image by Julia
-                        <br class="d-none d-md-block" />Burdajewicz).
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="row justify-content-evenly">
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="820"
-                          data-pswp-width="1054"
-                          href="assets/images/conservation_and_public_archaeology/fig._3._julka.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 3. Unearthing of the mosaic in trench T2-S one year since its discovery, 2024 (image by Julia Burdajewicz)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._3._julka_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-15"
-                      >
-                        Fig. 3. Unearthing of the mosaic in trench T2-S one year
-                        since <br class="d-none d-md-block" />its discovery,
-                        2024 (image by Julia Burdajewicz).
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="1087"
-                          data-pswp-width="902"
-                          href="assets/images/conservation_and_public_archaeology/fig._4._julka.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 4. The mosaic after the application of mortar bands and cleaning, before reburial, 2024 (image by Julia Burdajewicz)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._4._julka_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-16"
-                      >
-                        Fig. 4. The mosaic after the application
-                        <br class="d-none d-md-block" />of mortar bands and
-                        cleaning, before
-                        <br class="d-none d-md-block" />reburial, 2024 (image by
-                        Julia <br class="d-none d-md-block" />Burdajewicz).
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <h2 class="pt-3" id="section-5">Public Archaeology</h2>
-              <div
-                class="gallery pswp-gallery--with-caption"
-                id="gallery--with-custom-caption"
-              >
-                <p id="paragraph-9">
-                  The community outreach program implemented during the project
-                  will enhance understanding the local population's attitudes
-                  towards their heritage. It may be possible to collect
-                  potential information on unrecorded (clandestine)
-                  archaeological findings in the vicinity of the site, as well
-                  as on the oral traditions and legends connected with the site.
-                  Another benefit of such an approach is the cooperation and
-                  relationship-building with the local community achieved
-                  through public archaeology. The engagement of the local
-                  community may enhance the protection and preservation of the
-                  discovered cultural heritage of the area.
-                </p>
-                <p id="paragraph-10">
-                  The first step in the 2023 season was to conduct social
-                  research (by Dr. Katarzyna Radziwiłko). Interviews were
-                  conducted with people of both genders (<span
-                    class="pswp-gallery__item"
-                    ><a
-                      data-pswp-height="3888"
-                      data-pswp-width="5184"
-                      href="assets/images/conservation_and_public_archaeology/fig._1_radziwilko.jpg"
-                      target="_blank"
-                      ><button
-                        alt="Fig. 1. Interview with one of the local workers, 2023 (image by Jolanta Młynarczyk)."
-                        class="badge clickable-badge"
-                      >
-                        Fig. 1
-                      </button></a
-                    ></span
-                  >). Among the respondents were excavation workers, shepherds,
-                  field owners, vendors/owners of nearby stores, and students.
-                  Interviews were conducted in Arabic and simultaneously
-                  translated into English with the DoA Representative, Mrs. Hana
-                  Lafi, acting as interpreter. The main objective of the
-                  interviews was to obtain answers to topics related to the
-                  historical and cultural heritage and its protection, as well
-                  as to prospective development of the site for tourist
-                  purposes. The conducted research was the first step to
-                  creating an action plan involving the local community to
-                  protect their historical heritage.
-                </p>
-                <p id="paragraph-11">
-                  In addition, thanks to the assistance of Mrs. Hanadi Al-Taher
-                  of the SCHEP, the first "open day" was held at the excavation
-                  site, to which the local community was invited. During this
-                  event, the visitors were familiarized with the history of the
-                  site and the methodology of excavations (<span
-                    class="pswp-gallery__item"
-                    ><a
-                      data-pswp-height="768"
-                      data-pswp-width="1024"
-                      href="assets/images/conservation_and_public_archaeology/fig._2_radziwilko.jpg"
-                      target="_blank"
-                      ><button
-                        alt="Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk introduces guests to ceramic finds (image by Katarzyna Radziwiłko)."
-                        class="badge clickable-badge"
-                      >
-                        Fig. 2
-                      </button></a
-                    ></span
-                  >).
-                </p>
-                <p id="paragraph-12">
-                  In the 2024 season, another "open day" was organized on-site
-                  with the support of Mrs. Hanadi Al-Taher. We hosted members of
-                  the local community and explained to them the history and
-                  importance of the site of Khirbat as-Sar.
-                </p>
-              </div>
-              <div
-                class="gallery pswp-gallery--with-caption"
-                id="gallery--with-custom-caption"
-              >
-                <div class="row justify-content-evenly">
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="3888"
-                          data-pswp-width="5184"
-                          href="assets/images/conservation_and_public_archaeology/fig._1_radziwilko.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 1. Interview with one of the local workers, 2023 (image by Jolanta Młynarczyk)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._1_radziwilko_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-17"
-                      >
-                        Fig. 1. Interview with one of the local workers, 2023
-                        (image by <br class="d-none d-md-block" />Jolanta
-                        Młynarczyk).
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div class="mb-4 col-auto">
-                    <figure class="figure">
-                      <div class="pswp-gallery__item">
-                        <a
-                          data-pswp-height="768"
-                          data-pswp-width="1024"
-                          href="assets/images/conservation_and_public_archaeology/fig._2_radziwilko.jpg"
-                          target="_blank"
-                        >
-                          <img
-                            alt="Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk introduces guests to ceramic finds (image by Katarzyna Radziwiłko)."
-                            class="figure-img figure-image-vert300 img-fluid"
-                            src="assets/images/conservation_and_public_archaeology/fig._2_radziwilko_516.jpg"
-                          />
-                        </a>
-                      </div>
-                      <figcaption
-                        class="figure-caption float"
-                        id="figcaption-18"
-                      >
-                        Fig. 2. Open day 2023. Prof. Jolanta Mlynarczyk
-                        introduces <br class="d-none d-md-block" />guests to
-                        ceramic finds (image by Katarzyna Radziwiłko).
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="pt-5 mt-auto" id="footer"></div>
+
+        <div id="footer" class="pt-5 mt-auto"></div>
     </div>
+
     <!-- SCRIPTS v1.8+tooltips -->
-    <script
-      crossorigin="anonymous"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script
-      crossorigin="anonymous"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="assets/scripts/footer.js"></script>
     <script src="assets/scripts/header.js"></script>
     <script src="assets/scripts/scripts.js"></script>
-    <script src="assets/scripts/gallery+caption.js" type="module"></script>
+    <script type="module" src="assets/scripts/gallery+caption.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const tooltipTriggerList = [].slice.call(
-          document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        );
-        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl);
+        document.addEventListener('DOMContentLoaded', function () {
+          const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
         });
-      });
     </script>
+
     <!-- END OF SCRIPTS -->
-  </body>
+
+</body>
+
 </html>

@@ -1,527 +1,644 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-<!-- HEAD v1.91+photoswipe -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Exploration - Khirbet es-Sar Excavations Project</title>
-<!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
-<script> 
+    <head>
+        <!-- HEAD v1.91+photoswipe -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exploration - Khirbet es-Sar Excavations Project</title>
+        <!-- Automatic url base switching for local and github pages. To be deleted in deployment. -->
+        <script> 
           const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
           const baseTag = document.createElement("base");
           baseTag.href = isLocal ? "/" : "/Khirbet_As-Sar_website/";
           document.head.appendChild(baseTag);
         </script>
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="assets/styles/custom.min.css" rel="stylesheet"/>
-<link href="assets/styles/styles.css" rel="stylesheet"/>
-<link href="assets/fontawesome/css/all.min.css" rel="stylesheet"/>
-<link href="https://www.unpkg.com/photoswipe@5.4.4/dist/photoswipe.css" rel="stylesheet"/>
-<script defer="" src="assets/fontawesome/sharp-solid.js"></script>
-<script defer="" src="assets/fontawesome/solid.js"></script>
-<script defer="" src="assets/fontawesome/js/fontawesome.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
-</head>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link href="assets/styles/custom.min.css" rel="stylesheet">
+        <link href="assets/styles/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="https://www.unpkg.com/photoswipe@5.4.4/dist/photoswipe.css">
+        <script defer src="assets/fontawesome/sharp-solid.js"></script>
+        <script defer src="assets/fontawesome/solid.js"></script>
+        <script defer src="assets/fontawesome/js/fontawesome.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flexsearch"></script>
+      
+    </head>
 <body>
-<div class="container-fluid min-vh-100 d-flex flex-column px-0">
-<div id="header"></div>
-<div class="container-fluid pt-0 mx-0 px-0">
-<!-- NAVBAR v2.4 -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
-<div class="container-fluid">
-<a class="navbar-brand" href="#" id="navbarBrand">Brand</a>
-<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<div class="col-xl-1 d-flex"></div>
-<ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
-<li class="nav-item">
-<a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
-<span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
+    <div class="container-fluid min-vh-100 d-flex flex-column px-0">
+        <div id="header"></div>
+        <div class="container-fluid pt-0 mx-0 px-0">    
+            <!-- NAVBAR v2.5 -->
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark-opacity px-5 px-lg-5 px-md-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand" id="navbarBrand" href="#">Brand</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="col-xl-1 d-flex"></div>
+                        <ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="index.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-house"></i></span> Home
                                 </a>
-</li>
-<li class="nav-item">
-<a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
-<span class="nav-icon"><i class="fa-sharp fa-solid fa-map"></i></span> Site
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="site.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-map"></i></span> Site
                                 </a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="nav-link px-0 d-flex align-items-center position-relative nav-item-active" href="exploration.html">
-<span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Exploration
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative nav-item-active" aria-current="page" href="exploration.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-compass"></i></span> Exploration
                                 </a>
-</li>
-<li class="nav-item dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle px-0 d-flex align-items-center position-relative" data-bs-toggle="dropdown" href="#" role="button">
-<span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span>Current Project
+                            </li>
+                            <li class="nav-item dropdown" >
+                              <a class="nav-link dropdown-toggle px-0 d-flex align-items-center position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <span class="nav-icon"><i class="fa-sharp fa-solid fa-shovel"></i></span>Current Project
                                 </a>
-<ul class="dropdown-menu mt-2 dropdown-menu-dark bg-dark-opacity animate slideIn">
-<li id="li-185"><a class="dropdown-item nav-link px-3 py-2" href="current_project_2023.html">
+                                <ul class="dropdown-menu mt-2 dropdown-menu-dark bg-dark-opacity animate slideIn">
+                                  <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2023.html">
                                     Current Project 2023</a></li>
-<li id="li-186"><a class="dropdown-item nav-link px-3 py-2" href="current_project_2024.html">
+                                  <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2024.html">
                                     Current Project 2024</a></li>
-<li id="li-187"><a class="dropdown-item nav-link px-3 py-2" href="conservation_and_public_archaeology.html">
+                                                                        <li><a class="dropdown-item nav-link px-3 py-2" href="current_project_2025.html">
+                                        Current Project 2025</a></li>
+                                    <li><a class="dropdown-item nav-link px-3 py-2" href="conservation_and_public_archaeology.html">
                                         Conservation and Public Archaeology</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link px-0 d-flex align-items-center position-relative" href="staff.html">
-<span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="staff.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span> Staff
                                 </a>
-</li>
-<li class="nav-item">
-<a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
-<span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0 d-flex align-items-center position-relative" href="gallery.html">
+                                    <span class="nav-icon"><i class="fa-sharp fa-solid fa-image"></i></span> Gallery
                                 </a>
-</li>
-<li class="nav-item">
-<a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
-<span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 me-4 d-flex align-items-center position-relative" href="publications.html">
+                                    <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> Publications
                                 </a>
-</li>
-</ul>
-<form class="d-flex" onsubmit="handleSearch(event)">
-<input aria-label="Search" class="form-control me-2" id="searchInput" placeholder="Search" type="search"/>
-<button class="btn btn-outline-success" type="submit">Search</button>
-</form>
-<div class="col-xl-1 d-flex"></div>
-</div>
-</div>
-</nav>
-<!-- CONTENT -->
-<div class="container pt-3">
-<div class="row">
-<!-- 1. akapit -->
-<div class="col-md-12 pt-3">
-<h2 id="section-129">DoA activity</h2>
-<div class="d-flex d-md-block flex-column-reverse">
-<div class="figure-container-300 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="3349" data-pswp-width="4755" href="assets/images/exploration1/fig.1_harding_rgb.jpg" target="_blank">
-<img alt="Fig. 1 Note by G.L. Harding (courtesy Department of Antiquities)" class="figure-img img-fluid" src="assets/images/exploration1/fig.1_harding_rgb_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float text-md-end" id="figcaption-169">
+                            </li>
+                        </ul>
+                        <form class="d-flex" onsubmit="handleSearch(event)">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <div class="col-xl-1 d-flex"></div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- CONTENT -->
+            <div class="container pt-3">
+                <div class="row">
+                    <!-- 1. akapit -->
+                    <div class="col-md-12 pt-3">
+                        <h2>DoA activity</h2>
+                        <div class="d-flex d-md-block flex-column-reverse">
+                            <div class="figure-container-300 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <figure class="figure" >
+                                    <div class=" pswp-gallery__item">
+                                        <a href="assets/images/exploration1/fig.1_harding_rgb.jpg" data-pswp-width="4755" data-pswp-height="3349" target="_blank">
+                                            <img 
+                                            src="assets/images/exploration1/fig.1_harding_rgb_640.jpg" 
+                                            class="figure-img img-fluid"
+                                            alt="Fig. 1 Note by G.L. Harding (courtesy Department of Antiquities)" >
+                                        </a>
+                                    </div>
+                                    <figcaption class="figure-caption float text-md-end">
                                         Fig. 1 Note by G.L. Harding (courtesy Department of Antiquities)    
                                     </figcaption>
-</figure>
-</div>
-<div class="pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<p id="paragraph-137">1928, the independent Jordanian Department of Antiquities (DoA) was established. Soon afterward, in 1934, the first antiquities law in Jordan was issued. After the days of travelers in the 19th and early 20th centuries, a new phase in the country's exploration began. New government administration started working to spread the systematic care of antiquities. In the DoA archives (vol. S: p. 20 [unpublished]), there is a short note left by G.L. Harding (director of the DoA from 1939 to 1956) dedicated to a site 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="3349" data-pswp-width="4755" href="assets/images/exploration1/fig.1_harding_rgb.jpg" target="_blank"><button alt="Fig. 1 Note by G.L. Harding (courtesy Department of Antiquities)" class="badge clickable-badge">Fig. 1</button></a></span>): </p>
-<blockquote class="wp-block-quote" style="z-index: -1;"><p id="paragraph-138">“From Wadi Sir proceeded to Khirbet Sar, the most prominent site in the neighbourhood and perhaps the most important. Being a ‘Flint’ site it is, like others of the same nature in the district, entirely absolved from damage by stone-quarriers or the encroachment modern dwellings. The most prominent feature of the site is a large megalithic monument, a Kusr, built of huge flint blocks which may be attributed to the late Bronze and Archaic Iron ages and immediately to the east of same are eight semi-circular arches (four on each side of a ruined building) of well dressed white limestone blocks, obviously the handiwork of a later epoch, probably Roman or Byzantine.” </p>
-<cite>G.L. Harding</cite>
-</blockquote>
-</div>
-</div>
-<p id="paragraph-139">It is difficult to say whether Lankester personally visited the site and, if so, when it was. Perhaps between 1939 and 1956, when he acted as DoA director. However, the fact that he mentions only eight arches (instead of the 16 now visible) suggests that he took this information from an earlier description by Conder (1889, 153). </p>
-<p id="paragraph-140">The site is coded as JADIS 2215017 (The Jordanian Archaeological Data Information System) and MEGA-J 11304 (Middle Eastern Geodatabase for Antiquities, Jordan) in the DoA databases (<a href="http://www.megajordan.org" rel="noopener noreferrer" target="_blank">http://www.megajordan.org</a>).</p>
-</div>
-<!-- 2. akapit -->
-<div class="col-md-12 pt-3">
-<h2 id="section-130">Three official field surveys</h2>
-<div class="col-md-12">
-<div class="col-md-12">
-<div class="pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="figure-container-200 me-5 float-start" id="exploration-fig2-float">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1737" data-pswp-width="870" href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" target="_blank">
-<img alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)" class="figure-img img-fluid" src="assets/images/exploration1/fig.2_villeneuve-survey_rgb_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-170">
+                                </figure>
+                            </div>
+                            <div class="pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <p>1928, the independent Jordanian Department of Antiquities (DoA) was established. Soon afterward, in 1934, the first antiquities law in Jordan was issued. After the days of travelers in the 19th and early 20th centuries, a new phase in the country's exploration began. New government administration started working to spread the systematic care of antiquities. In the DoA archives (vol. S: p. 20 [unpublished]), there is a short note left by G.L. Harding (director of the DoA from 1939 to 1956) dedicated to a site 
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.1_harding_rgb.jpg" data-pswp-width="4755" data-pswp-height="3349" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 1 Note by G.L. Harding (courtesy Department of Antiquities)">Fig. 1</button></a></span>): </p>
+                                <blockquote class="wp-block-quote" style="z-index: -1;"><p>“From Wadi Sir proceeded to Khirbet Sar, the most prominent site in the neighbourhood and perhaps the most important. Being a ‘Flint’ site it is, like others of the same nature in the district, entirely absolved from damage by stone-quarriers or the encroachment modern dwellings. The most prominent feature of the site is a large megalithic monument, a Kusr, built of huge flint blocks which may be attributed to the late Bronze and Archaic Iron ages and immediately to the east of same are eight semi-circular arches (four on each side of a ruined building) of well dressed white limestone blocks, obviously the handiwork of a later epoch, probably Roman or Byzantine.” </p>
+                                    <cite>G.L. Harding</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <p>It is difficult to say whether Lankester personally visited the site and, if so, when it was. Perhaps between 1939 and 1956, when he acted as DoA director. However, the fact that he mentions only eight arches (instead of the 16 now visible) suggests that he took this information from an earlier description by Conder (1889, 153). </p>
+                        <p>The site is coded as JADIS 2215017 (The Jordanian Archaeological Data Information System) and MEGA-J 11304 (Middle Eastern Geodatabase for Antiquities, Jordan) in the DoA databases (<a href="http://www.megajordan.org" target="_blank" rel="noopener noreferrer">http://www.megajordan.org</a>).</p>
+                    </div>
+                    <!-- 2. akapit -->
+                    <div class="col-md-12 pt-3">
+                        <h2>Three official field surveys</h2>
+                        
+
+                        <div class="col-md-12">
+
+                                <div class="col-md-12">
+    
+                                    <div class="pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                        <div class="figure-container-200 me-5 float-start" id="exploration-fig2-float">
+                                            <figure class="figure" >
+                                                <div class=" pswp-gallery__item">
+                                                    <a href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" data-pswp-width="870" data-pswp-height="1737" target="_blank">
+                                                        <img 
+                                                        src="assets/images/exploration1/fig.2_villeneuve-survey_rgb_640.jpg" 
+                                                        class="figure-img img-fluid"
+                                                        alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)" >
+                                                    </a>
+                                                </div>
+                                                <figcaption class="figure-caption float">
                                                     Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)    
                                                 </figcaption>
-</figure>
-</div>
-</div>
-<div class="d-flex d-md-block flex-column-reverse">
-<div class="pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="figure-container-200 me-md-0 mx-5 mt-4 py-md-1 py-3 float-end" id="exploration-fig3-float">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="955" data-pswp-width="1358" href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" target="_blank">
-<img alt="Fig.3. Plan of the monumental area." class="figure-img img-fluid" src="assets/images/exploration1/fig.3_villeneuve-monumental_area_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float text-md-end" id="figcaption-171">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex d-md-block flex-column-reverse">
+                                        <div class="pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                            <div class="figure-container-200 me-md-0 mx-5 mt-4 py-md-1 py-3 float-end" id="exploration-fig3-float">
+                                                <figure class="figure" >
+                                                    <div class=" pswp-gallery__item">
+                                                        <a href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" data-pswp-width="1358" data-pswp-height="955" target="_blank">
+                                                            <img 
+                                                            src="assets/images/exploration1/fig.3_villeneuve-monumental_area_640.jpg" 
+                                                            class="figure-img img-fluid"
+                                                            alt="Fig.3. Plan of the monumental area." >
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="figure-caption float text-md-end">
                                                         Fig.3. Plan of the monumental area.    
                                                     </figcaption>
-</figure>
-</div>
-</div>
-<div>
-<h5 id="section-131">IFAPO survey</h5>
-<p class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">In 1983, the site was part of a detailed survey focused on the area surrounding Iraq al-Amir (west of Amman) and conducted by <a data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Download PDF" data-bs-toggle="tooltip" href="assets/pdf/2-Villeneuve. Khirbet Sara (Jordan) 1983.pdf" rel="noopener noreferrer" target="_blank">F. Villeneuve (2020)</a> on behalf of the French Archaeological Institute IFAPO (the present IFPO) 
-                                                (<span class="pswp-gallery__item"><a data-pswp-height="1705" data-pswp-width="833" href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" target="_blank"><button alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)" class="badge clickable-badge">Fig. 2</button></a></span>).
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5>IFAPO survey</h5>
+                                            <p class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">In 1983, the site was part of a detailed survey focused on the area surrounding Iraq al-Amir (west of Amman) and conducted by <a href="assets/pdf/2-Villeneuve. Khirbet Sara (Jordan) 1983.pdf" rel="noopener noreferrer" target="_blank" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Download PDF">F. Villeneuve (2020)</a> on behalf of the French Archaeological Institute IFAPO (the present IFPO) 
+                                                (<span class="pswp-gallery__item"><a 
+                                                    href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" data-pswp-width="833" data-pswp-height="1705" target="_blank"><button
+                                                        class="badge clickable-badge"
+                                                        alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)">Fig. 2</button></a></span>).
                                                 However, the results of this research were not published until 2020, just two years after archaeologists from the University of Warsaw began systematic fieldwork at Khirbet es-Sar (see below). However, the publication should appreciate the relatively detailed plan of the monumental area 
-                                                (<span class="pswp-gallery__item"><a data-pswp-height="955" data-pswp-width="1358" href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" target="_blank"><button alt="Fig.3. Plan of the monumental area." class="badge clickable-badge">Fig. 3</button></a></span>),
+                                                (<span class="pswp-gallery__item"><a 
+                                                    href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" data-pswp-width="1358" data-pswp-height="955" target="_blank"><button
+                                                        class="badge clickable-badge"
+                                                        alt="Fig.3. Plan of the monumental area.">Fig. 3</button></a></span>),
                                                 illustrated examples of pottery collected on the surface, and photos of several elements of architectural decoration. 
                                             </p>
-</div>
-</div>
-<div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="figure-container-800 py-3 mx-0" id="exploration-fig2-no-float">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1737" data-pswp-width="870" href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" target="_blank">
-<img alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)" class="figure-img img-fluid" src="assets/images/exploration1/fig.2_villeneuve-survey_rgb_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-172">
+                                        </div>
+                                    </div>
+                                    <div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
+                                        <div class="figure-container-800 py-3 mx-0" id="exploration-fig2-no-float">
+                                            <figure class="figure" >
+                                                <div class=" pswp-gallery__item">
+                                                    <a href="assets/images/exploration1/fig.2_villeneuve-survey_rgb.jpg" data-pswp-width="870" data-pswp-height="1737" target="_blank">
+                                                        <img 
+                                                        src="assets/images/exploration1/fig.2_villeneuve-survey_rgb_640.jpg" 
+                                                        class="figure-img img-fluid"
+                                                        alt="Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)" >
+                                                    </a>
+                                                </div>
+                                                <figcaption class="figure-caption float">
                                                     Fig. 2. Sara location map, 1983 (M.-A. Meyer). Numbers = archaeological sites (96 = Sara). Grey = 1983 inhabited areas. Black lines = modern roads. Dashed lines = wadis (after F. Villeneuve 2020, 310, Fig. 1)    
                                                 </figcaption>
-</figure>
-</div>
-<div class="figure-container-800 py-3 mx-0" id="exploration-fig3-no-float">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="955" data-pswp-width="1358" href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" target="_blank">
-<img alt="Fig.3. Plan of the monumental area." class="figure-img img-fluid" src="assets/images/exploration1/fig.3_villeneuve-monumental_area_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float text-md-end" id="figcaption-173">
+                                            </figure>
+                                        </div>
+                                        <div class="figure-container-800 py-3 mx-0" id="exploration-fig3-no-float">
+                                            <figure class="figure" >
+                                                <div class=" pswp-gallery__item">
+                                                    <a href="assets/images/exploration1/fig.3_villeneuve-monumental_area.jpg" data-pswp-width="1358" data-pswp-height="955" target="_blank">
+                                                        <img 
+                                                        src="assets/images/exploration1/fig.3_villeneuve-monumental_area_640.jpg" 
+                                                        class="figure-img img-fluid"
+                                                        alt="Fig.3. Plan of the monumental area." >
+                                                    </a>
+                                                </div>
+                                                <figcaption class="figure-caption float text-md-end">
                                                     Fig.3. Plan of the monumental area.    
                                                 </figcaption>
-</figure>
-</div>
-</div>
-</div>
-<h5 id="section-132">La Sierra University survey</h5>
-<p id="paragraph-141">In 2000, Chang-ho Ji of the La Sierra University investigated the Khirbat as-Sar (labeled as Site 210) in the survey, covering Iraq al-Amir and Wadi al-Kafrayn regions. His report written for the Department of Antiquities focuses on the "qasr" and the courtyard to the east of it, providing them the new measurements, however, with no attempt to seize the layout of the compound. He also observed "at least two to three large building complexes on the eastern and southern areas of the site." The potsherds found by the survey team dated to the Hellenistic– Roman, Byzantine, Early Islamic and mid Islamic periods (<span class="fake-link" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Ji, Chang-ho C. (2000). The survey in the regions of ’Iraq al-Amir and the Wadi al-Kafrayn,2000. Unpublished report submitted to the Department of Antiquities of Jordan" data-bs-toggle="tooltip">Ji 2000</span>).</p>
-<h5 id="section-133">PCMA survey</h5>
-<div class="d-flex d-md-block flex-column-reverse">
-<div class="figure-container-200 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="3094" data-pswp-width="2253" href="assets/images/exploration1/fig.5_archelements.jpg" target="_blank">
-<img alt="Fig. 5. Select architectural fragments in limestone" class="figure-img img-fluid" src="assets/images/exploration1/fig.5_archelements_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float text-md-end" id="figcaption-174">
+                                            </figure>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <h5>La Sierra University survey</h5>
+                                <p>In 2000, Chang-ho Ji of the La Sierra University investigated the Khirbat as-Sar (labeled as Site 210) in the survey, covering Iraq al-Amir and Wadi al-Kafrayn regions. His report written for the Department of Antiquities focuses on the "qasr" and the courtyard to the east of it, providing them the new measurements, however, with no attempt to seize the layout of the compound. He also observed "at least two to three large building complexes on the eastern and southern areas of the site." The potsherds found by the survey team dated to the Hellenistic– Roman, Byzantine, Early Islamic and mid Islamic periods (<span class="fake-link" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Ji, Chang-ho C. (2000). The survey in the regions of ’Iraq al-Amir and the Wadi al-Kafrayn,2000. Unpublished report submitted to the Department of Antiquities of Jordan">Ji 2000</span>).</p>
+                                <h5>PCMA survey</h5>
+                                <div class="d-flex d-md-block flex-column-reverse">
+                                        <div class="figure-container-200 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
+                                            <figure class="figure" >
+                                                <div class=" pswp-gallery__item">
+                                                    <a href="assets/images/exploration1/fig.5_archelements.jpg" data-pswp-width="2253" data-pswp-height="3094" target="_blank">
+                                                        <img 
+                                                        src="assets/images/exploration1/fig.5_archelements_640.jpg" 
+                                                        class="figure-img img-fluid"
+                                                        alt="Fig. 5. Select architectural fragments in limestone" >
+                                                    </a>
+                                                </div>
+                                                <figcaption class="figure-caption float text-md-end">
                                                     Fig. 5. Select architectural fragments in limestone    
                                                 </figcaption>
-</figure>
-</div>
-<div class="figure-container-200 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="3509" data-pswp-width="4945" href="assets/images/exploration1/fig.4_pcma_survey_rgb.jpg" target="_blank">
-<img alt="Fig. 4. General plan of the site of Khirbat as-Sar" class="figure-img img-fluid" src="assets/images/exploration1/fig.4_pcma_survey_rgb_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float text-md-end" id="figcaption-175">
+                                            </figure>
+                                        </div>
+                                        <div class="figure-container-200 display-no-float-md me-md-0 ms-md-5 mx-0 py-md-0 py-3 float-md-end gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
+                                            <figure class="figure" >
+                                                <div class=" pswp-gallery__item">
+                                                    <a href="assets/images/exploration1/fig.4_pcma_survey_rgb.jpg" data-pswp-width="4945" data-pswp-height="3509" target="_blank">
+                                                        <img 
+                                                        src="assets/images/exploration1/fig.4_pcma_survey_rgb_640.jpg" 
+                                                        class="figure-img img-fluid"
+                                                        alt="Fig. 4. General plan of the site of Khirbat as-Sar" >
+                                                    </a>
+                                                </div>
+                                                <figcaption class="figure-caption float text-md-end">
                                                     Fig. 4. General plan of the site of Khirbat as-Sar    
                                                 </figcaption>
-</figure>
-</div>
-<div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<p id="paragraph-142">Finally, the team from the Polish Centre of the Mediterranean Archaeology (PCMA), University of Warsaw, conducted an archaeological survey and geophysical investigation at the site between March 8 and 28, 2018 (DoA permit no. 2018/4). The fieldwork was devoted to non-invasive research within the 16.000 square meters fenced by the DOA (a part of the ancient site lies outside the fence).</p>
-<p id="paragraph-143">Geophysical investigation using the electric resistivity method detected architectural remains concealed under the ground, while all the walls' remains still visible on the surface were mapped using a tacheometer. The combined results of the two methods produced the first, albeit preliminary and limited to the fenced area, site plan. It is clear that the structures surrounding the "qasr" follow the exact alignment. On the contrary, south of the qasr, the walls have a more random orientation, probably reflecting different phases of site occupation 
-                                            (<span class="pswp-gallery__item"><a data-pswp-height="3509" data-pswp-width="4945" href="assets/images/exploration1/fig.4_pcma_survey_rgb.jpg" target="_blank"><button alt="Fig. 4. General plan of the site of Khirbat as-Sar" class="badge clickable-badge">Fig. 4</button></a></span>).
+                                            </figure>
+                                        </div>
+        
+                                    <div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
+                                        <p>Finally, the team from the Polish Centre of the Mediterranean Archaeology (PCMA), University of Warsaw, conducted an archaeological survey and geophysical investigation at the site between March 8 and 28, 2018 (DoA permit no. 2018/4). The fieldwork was devoted to non-invasive research within the 16.000 square meters fenced by the DOA (a part of the ancient site lies outside the fence).</p>
+                                        <p>Geophysical investigation using the electric resistivity method detected architectural remains concealed under the ground, while all the walls' remains still visible on the surface were mapped using a tacheometer. The combined results of the two methods produced the first, albeit preliminary and limited to the fenced area, site plan. It is clear that the structures surrounding the "qasr" follow the exact alignment. On the contrary, south of the qasr, the walls have a more random orientation, probably reflecting different phases of site occupation 
+                                            (<span class="pswp-gallery__item"><a 
+                                                href="assets/images/exploration1/fig.4_pcma_survey_rgb.jpg" data-pswp-width="4945" data-pswp-height="3509" target="_blank"><button
+                                                    class="badge clickable-badge"
+                                                    alt="Fig. 4. General plan of the site of Khirbat as-Sar">Fig. 4</button></a></span>).
                                         </p>
-<p id="paragraph-144">The pottery gathered from the surface during the survey suggested the site's occupation was from the Persian period (perhaps even the Iron Age) through the Middle Islamic period. Architectural elements visible on the surface were also documented 
-                                            (<span class="pswp-gallery__item"><a data-pswp-height="3094" data-pswp-width="2253" href="assets/images/exploration1/fig.5_archelements.jpg" target="_blank"><button alt="Fig. 5. Select architectural fragments in limestone" class="badge clickable-badge">Fig. 5</button></a></span>).
+                                        
+                                        <p>The pottery gathered from the surface during the survey suggested the site's occupation was from the Persian period (perhaps even the Iron Age) through the Middle Islamic period. Architectural elements visible on the surface were also documented 
+                                            (<span class="pswp-gallery__item"><a 
+                                                href="assets/images/exploration1/fig.5_archelements.jpg" data-pswp-width="2253" data-pswp-height="3094" target="_blank"><button
+                                                    class="badge clickable-badge"
+                                                    alt="Fig. 5. Select architectural fragments in limestone">Fig. 5</button></a></span>).
                                         </p>
-</div>
-</div>
-<h4 class="fw-light pt-5" id="section-134">Preliminary chronology</h4>
-<p id="paragraph-145">The survey made it possible to propose a preliminary chronology for the site as follows:</p>
-<ol>
-<li id="li-188">
+                                    </div>
+                                </div>
+                                <h4 class="fw-light pt-5">Preliminary chronology</h4>
+                                <p>The survey made it possible to propose a preliminary chronology for the site as follows:</p>
+                                <ol>
+                                    <li>
                                         Iron Age: the "qasr" and presumably some potsherds found on the surface;
                                     </li>
-<li id="li-189">
+                                    <li>
                                         Persian period: no remains or artifacts have been identified;
                                     </li>
-<li id="li-190">
+                                    <li>
                                         Hellenistic period: possibly "rusticated" blocks re-used in the Roman structure and some potsherds found on the surface;
                                     </li>
-<li id="li-191">
+                                    <li>
                                         Roman period: addition to the "qasr" of a vestibule and a square courtyard, with two rows of arcades added in a later period;
                                     </li>
-<li id="li-192">
+                                    <li>
                                         Byzantine and/or Umayyad period: some changes and additions to the north of the courtyard; many walls and potsherds all around the site.
                                     </li>
-<li id="li-193">
+                                    <li>
                                         Medieval period: abundant pottery finds are soundproof that the site was still inhabited during the Mamluk period (13th till early 16th century).
                                     </li>
-</ol>
-<p id="paragraph-146">Examples of pottery collected during the survey; chronological range from the Iron Age to the Mameluke period (drawings M. Burdajewicz):</p>
-<div class="row gallery pswp-gallery--with-caption pt-2 text-center" id="gallery--with-custom-caption">
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="922" data-pswp-width="1254" href="assets/images/exploration1/a-iron_age.jpg" target="_blank">
-<img alt="Iron Age pottery" class="img-fluid" src="assets/images/exploration1/a-iron_age_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-147">Iron Age pottery</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="834" data-pswp-width="1135" href="assets/images/exploration1/b-roman_hellenistic_plain_ware.jpg" target="_blank">
-<img alt="Plain wares: Roman and Hellenistic" class="img-fluid" src="assets/images/exploration1/b-roman_hellenistic_plain_ware_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-148">Plain wares: Roman and Hellenistic</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1228" data-pswp-width="1670" href="assets/images/exploration1/c-roman_and_byzantine_fine_wares_1.jpg" target="_blank">
-<img alt="Fine wares: Roman and Byzantine" class="img-fluid" src="assets/images/exploration1/c-roman_and_byzantine_fine_wares_1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-149">Fine wares: Roman and Byzantine</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1228" data-pswp-width="1670" href="assets/images/exploration1/c-roman_and_byzantine_fine_wares_2.jpg" target="_blank">
-<img alt="Fine wares: Roman and Byzantine" class="img-fluid" src="assets/images/exploration1/c-roman_and_byzantine_fine_wares_2_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-150">Fine wares: Roman and Byzantine</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1357" data-pswp-width="1846" href="assets/images/exploration1/d-cooking_vessels_of_roman_and_byzantine_date.jpg" target="_blank">
-<img alt="Cooking vessels of Roman and Byzantine date" class="img-fluid" src="assets/images/exploration1/d-cooking_vessels_of_roman_and_byzantine_date_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-151">Cooking vessels of Roman and Byzantine date</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1259" data-pswp-width="1712" href="assets/images/exploration1/e-late_romanbyzantine_to_umayyad.jpg" target="_blank">
-<img alt="Late Roman/Byzantine to Umayyad(?)" class="img-fluid" src="assets/images/exploration1/e-late_romanbyzantine_to_umayyad_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-152">Late Roman/Byzantine to Umayyad(?)</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1032" data-pswp-width="1399" href="assets/images/exploration1/f-umayyad_into_abbasid_painted_pottery.jpg" target="_blank">
-<img alt="Umayyad (into Abbasid?) painted pottery" class="img-fluid" src="assets/images/exploration1/f-umayyad_into_abbasid_painted_pottery_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-153">Umayyad (into Abbasid?) painted pottery</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="921" data-pswp-width="1253" href="assets/images/exploration1/g-medieval_glazed_pottery.jpg" target="_blank">
-<img alt="Medieval glazed pottery" class="img-fluid" src="assets/images/exploration1/g-medieval_glazed_pottery_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-154">Medieval glazed pottery</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1478" data-pswp-width="2010" href="assets/images/exploration1/h-painted_pottery_(mameluk)_1.jpg" target="_blank">
-<img alt="Painted pottery (Mameluk period)" class="img-fluid" src="assets/images/exploration1/h-painted_pottery_(mameluk)_1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-155">Painted pottery (Mameluk period)</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
-<a data-pswp-height="1478" data-pswp-width="2010" href="assets/images/exploration1/h-painted_pottery_(mameluk)_2.jpg" target="_blank">
-<img alt="Painted pottery (Mameluk period)" class="img-fluid" src="assets/images/exploration1/h-painted_pottery_(mameluk)_2_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-156">Painted pottery (Mameluk period)</p>
-</div>
-</div>
-</div>
-</div>
-<!-- 3. akapit -->
-<div class="col-md-12 pt-3">
-<div>
-<h2 id="section-135">First trial excavations by PCMA team</h2>
-<div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<p id="paragraph-157">To verify the survey's preliminary chronological observations, the PCMA team conducted a short <a data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Download PDF" data-bs-toggle="tooltip" href="assets/pdf/1-JM_MB_PAM27_KHIRBAT-AS-SAR_AUTORSKI.pdf" rel="noopener noreferrer" target="_blank">excavation season</a> between 7th and 27th March 2019 (DoA Permit no. 2019/5). Three trenches were opened in the eastern part of the courtyard of an architectural compound preliminary identified as a Roman-period sanctuary, the plan of which was mapped during the survey of 2018 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="1243" data-pswp-width="1978" href="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione.jpg" target="_blank"><button alt="Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary compound with the location of the trenches" class="badge clickable-badge">Fig. 6</button></a></span>).  
+                                </ol>
+                            
+                            <p>Examples of pottery collected during the survey; chronological range from the Iron Age to the Mameluke period (drawings M. Burdajewicz):</p>
+                            <div class="row gallery pswp-gallery--with-caption pt-2 text-center" id="gallery--with-custom-caption">
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/a-iron_age.jpg" data-pswp-width="1254" data-pswp-height="922" target="_blank">
+                                        <img src="assets/images/exploration1/a-iron_age_640.jpg" alt="Iron Age pottery" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Iron Age pottery</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/b-roman_hellenistic_plain_ware.jpg" data-pswp-width="1135" data-pswp-height="834" target="_blank">
+                                        <img src="assets/images/exploration1/b-roman_hellenistic_plain_ware_640.jpg" alt="Plain wares: Roman and Hellenistic" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Plain wares: Roman and Hellenistic</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/c-roman_and_byzantine_fine_wares_1.jpg" data-pswp-width="1670" data-pswp-height="1228" target="_blank">
+                                        <img src="assets/images/exploration1/c-roman_and_byzantine_fine_wares_1_640.jpg" alt="Fine wares: Roman and Byzantine" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Fine wares: Roman and Byzantine</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/c-roman_and_byzantine_fine_wares_2.jpg" data-pswp-width="1670" data-pswp-height="1228" target="_blank">
+                                        <img src="assets/images/exploration1/c-roman_and_byzantine_fine_wares_2_640.jpg" alt="Fine wares: Roman and Byzantine" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Fine wares: Roman and Byzantine</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/d-cooking_vessels_of_roman_and_byzantine_date.jpg" data-pswp-width="1846" data-pswp-height="1357" target="_blank">
+                                        <img src="assets/images/exploration1/d-cooking_vessels_of_roman_and_byzantine_date_640.jpg" alt="Cooking vessels of Roman and Byzantine date" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Cooking vessels of Roman and Byzantine date</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/e-late_romanbyzantine_to_umayyad.jpg" data-pswp-width="1712" data-pswp-height="1259" target="_blank">
+                                        <img src="assets/images/exploration1/e-late_romanbyzantine_to_umayyad_640.jpg" alt="Late Roman/Byzantine to Umayyad(?)" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Late Roman/Byzantine to Umayyad(?)</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/f-umayyad_into_abbasid_painted_pottery.jpg" data-pswp-width="1399" data-pswp-height="1032" target="_blank">
+                                        <img src="assets/images/exploration1/f-umayyad_into_abbasid_painted_pottery_640.jpg" alt="Umayyad (into Abbasid?) painted pottery" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Umayyad (into Abbasid?) painted pottery</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/g-medieval_glazed_pottery.jpg" data-pswp-width="1253" data-pswp-height="921" target="_blank">
+                                        <img src="assets/images/exploration1/g-medieval_glazed_pottery_640.jpg" alt="Medieval glazed pottery" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Medieval glazed pottery</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/h-painted_pottery_(mameluk)_1.jpg" data-pswp-width="2010" data-pswp-height="1478" target="_blank">
+                                        <img src="assets/images/exploration1/h-painted_pottery_(mameluk)_1_640.jpg" alt="Painted pottery (Mameluk period)" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Painted pottery (Mameluk period)</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3 mb-4 pswp-gallery__item">
+                                    <a href="assets/images/exploration1/h-painted_pottery_(mameluk)_2.jpg" data-pswp-width="2010" data-pswp-height="1478" target="_blank">
+                                        <img src="assets/images/exploration1/h-painted_pottery_(mameluk)_2_640.jpg" alt="Painted pottery (Mameluk period)" class="img-fluid">
+                                    </a>
+                                    <p class="py-2">Painted pottery (Mameluk period)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. akapit -->
+                    <div class="col-md-12 pt-3">
+                        <div >
+                            <h2>First trial excavations by PCMA team</h2>
+                            <div class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <p>To verify the survey's preliminary chronological observations, the PCMA team conducted a short <a href="assets/pdf/1-JM_MB_PAM27_KHIRBAT-AS-SAR_AUTORSKI.pdf" rel="noopener noreferrer" target="_blank" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Download PDF">excavation season</a> between 7th and 27th March 2019 (DoA Permit no. 2019/5). Three trenches were opened in the eastern part of the courtyard of an architectural compound preliminary identified as a Roman-period sanctuary, the plan of which was mapped during the survey of 2018 
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione.jpg" data-pswp-width="1978" data-pswp-height="1243" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary compound with the location of the trenches">Fig. 6</button></a></span>).  
                                 </p>
-<p id="paragraph-158"><span class="fw-semibold">Trench Sq1</span> was situated roughly on the long axis of the courtyard 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="2197" data-pswp-width="2045" href="assets/images/exploration1/fig.7._sq1_plan.jpg" target="_blank"><button alt="Fig. 7. Trench Sq1 (image Anna Kubicka)" class="badge clickable-badge">Fig. 7</button></a></span>).  
+                                 
+                                <p><span class="fw-semibold">Trench Sq1</span> was situated roughly on the long axis of the courtyard 
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.7._sq1_plan.jpg" data-pswp-width="2045" data-pswp-height="2197" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 7. Trench Sq1 (image Anna Kubicka)">Fig. 7</button></a></span>).  
                                     It revealed a massive north-south wall, with a series of floors abutting it on the east. All the floors except the lowermost one were dated by abundant pottery to the Mamluk period, 13th-15th century AD 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="1944" data-pswp-width="2592" href="assets/images/exploration1/fig.8._sq1.jpg" target="_blank"><button alt="Fig. 8. Trench Sq1 with the Mamluk-period floors on both sides of the E-W wall; view from the southeast" class="badge clickable-badge">Fig. 8</button></a></span>).  
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.8._sq1.jpg" data-pswp-width="2592" data-pswp-height="1944" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 8. Trench Sq1 with the Mamluk-period floors on both sides of the E-W wall; view from the southeast">Fig. 8</button></a></span>).  
                                     The excavated space was bisected by a narrow east-west wall of the Mamluk period.
                                 </p>
-</div>
-<div class="row justify-content-evenly gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1243" data-pswp-width="1978" href="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione.jpg" target="_blank">
-<img alt="Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary compound with the location of the trenches" class="figure-img figure-image-vert200 img-fluid" src="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-176">
-                                            Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary <br class="d-none d-md-block"/>compound with the location of the trenches (drawing <br class="d-none d-md-block"/>Anna Kubicka)    
+                            </div>
+
+                            <div class="row justify-content-evenly gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione.jpg" data-pswp-width="1978" data-pswp-height="1243" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.6_plan_stanowiska-2019-poprawione_640.jpg" 
+                                                class="figure-img figure-image-vert200 img-fluid"
+                                                alt="Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary compound with the location of the trenches" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 6. Khirbat As Sar (Sarah) 2019: the plan of the sanctuary <br class="d-none d-md-block">compound with the location of the trenches (drawing <br class="d-none d-md-block">Anna Kubicka)    
                                         </figcaption>
-</figure>
-</div>
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="2197" data-pswp-width="2045" href="assets/images/exploration1/fig.7._sq1_plan.jpg" target="_blank">
-<img alt="Fig. 7. Trench Sq1 (image Anna Kubicka)" class="figure-img figure-image-vert200 img-fluid" src="assets/images/exploration1/fig.7._sq1_plan_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-177">
-                                            Fig. 7. Trench Sq1 (image Anna <br class="d-none d-md-block"/>Kubicka)    
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.7._sq1_plan.jpg" data-pswp-width="2045" data-pswp-height="2197" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.7._sq1_plan_640.jpg" 
+                                                class="figure-img figure-image-vert200 img-fluid"
+                                                alt="Fig. 7. Trench Sq1 (image Anna Kubicka)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 7. Trench Sq1 (image Anna <br class="d-none d-md-block">Kubicka)    
                                         </figcaption>
-</figure>
-</div>
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1944" data-pswp-width="2592" href="assets/images/exploration1/fig.8._sq1.jpg" target="_blank">
-<img alt="Fig. 8. Trench Sq1 with the Mamluk-period floors on both sides of the E-W wall; view from the southeast" class="figure-img figure-image-vert200 img-fluid" src="assets/images/exploration1/fig.8._sq1_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-178">
-                                            Fig. 8. Trench Sq1 with the Mamluk-period floors <br class="d-none d-md-block"/>on both sides of the E-W wall; view from the <br class="d-none d-md-block"/>southeast (image by Jolanta Młynarczyk)    
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.8._sq1.jpg" data-pswp-width="2592" data-pswp-height="1944" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.8._sq1_640.jpg" 
+                                                class="figure-img figure-image-vert200 img-fluid"
+                                                alt="Fig. 8. Trench Sq1 with the Mamluk-period floors on both sides of the E-W wall; view from the southeast" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 8. Trench Sq1 with the Mamluk-period floors <br class="d-none d-md-block">on both sides of the E-W wall; view from the <br class="d-none d-md-block">southeast (image by Jolanta Młynarczyk)    
                                         </figcaption>
-</figure>
-</div>
-</div>
-<p class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">However, the analysis of the construction of the massive north-south wall revealed an original Roman-period part, possibly pertaining to a gate that would lead into the sanctuary courtyard 
-                                (<span class="pswp-gallery__item"><a data-pswp-height="1944" data-pswp-width="2592" href="assets/images/exploration1/fig.9._gate.jpg" target="_blank"><button alt="Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall founded on a Roman-period layer; view from the northeast" class="badge clickable-badge">Fig. 9</button></a></span>), 
+                                    </figure>
+                                </div>
+                            </div>    
+    
+    
+                            <p class=" gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">However, the analysis of the construction of the massive north-south wall revealed an original Roman-period part, possibly pertaining to a gate that would lead into the sanctuary courtyard 
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/exploration1/fig.9._gate.jpg" data-pswp-width="2592" data-pswp-height="1944" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall founded on a Roman-period layer; view from the northeast">Fig. 9</button></a></span>), 
                                 and its extension to the north, constructed with the use of Roman <i>spolia</i>, probably in the early phase of the Mamluk period. The lowermost floor in this trench, connected with the original construction, can safely be dated to the Roman period (2nd century AD?) on the basis of pottery finds 
-                                (<span class="pswp-gallery__item"><a data-pswp-height="2136" data-pswp-width="4562" href="assets/images/exploration1/fig.10.__sq1_west_elevation.jpg" target="_blank"><button alt="Fig. 10. Trench Sq1: west elevation of the N-S wall (image by Anna Kubicka)" class="badge clickable-badge">Fig. 10</button></a></span>).
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/exploration1/fig.10.__sq1_west_elevation.jpg" data-pswp-width="4562" data-pswp-height="2136" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 10. Trench Sq1: west elevation of the N-S wall (image by Anna Kubicka)">Fig. 10</button></a></span>).
 
                             </p>
-<div class="row justify-content-evenly gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1944" data-pswp-width="2592" href="assets/images/exploration1/fig.9._gate.jpg" target="_blank">
-<img alt="Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall founded on a Roman-period layer; view from the northeast" class="figure-img figure-image-vert300 img-fluid" src="assets/images/exploration1/fig.9._gate_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-179">
-                                            Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall <br class="d-none d-md-block"/>founded on a Roman-period layer; view from the northeast <br class="d-none d-md-block"/> (image by Jolanta Młynarczyk)    
+    
+                            <div class="row justify-content-evenly gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.9._gate.jpg" data-pswp-width="2592" data-pswp-height="1944" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.9._gate_640.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid"
+                                                alt="Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall founded on a Roman-period layer; view from the northeast" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 9. Trench Sq1: the Islamic-period extension of the N-S wall <br class="d-none d-md-block">founded on a Roman-period layer; view from the northeast <br class="d-none d-md-block"> (image by Jolanta Młynarczyk)    
                                         </figcaption>
-</figure>
-</div>
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="2136" data-pswp-width="4562" href="assets/images/exploration1/fig.10.__sq1_west_elevation.jpg" target="_blank">
-<img alt="Fig. 10. Trench Sq1: west elevation of the N-S wall (image by Anna Kubicka)" class="figure-img figure-image-vert300 img-fluid" src="assets/images/exploration1/fig.10.__sq1_west_elevation_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-180">
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto ">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.10.__sq1_west_elevation.jpg" data-pswp-width="4562" data-pswp-height="2136" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.10.__sq1_west_elevation_640.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid"
+                                                alt="Fig. 10. Trench Sq1: west elevation of the N-S wall (image by Anna Kubicka)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
                                             Fig. 10. Trench Sq1: west elevation of the N-S wall (image by Anna Kubicka)    
                                         </figcaption>
-</figure>
-</div>
-</div>
-<div class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<p id="paragraph-159"><span class="fw-semibold">Trench Sq2</span> was opened before the easternmost arch preserved in the southern row of courtyard arcades. By their style of execution, the arches belong to the Roman period. The exploration of this particular one reached the original level of the courtyard, exposing a massive stylobate on which the arch was constructed 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="5184" data-pswp-width="3888" href="assets/images/exploration1/fig.11._arch.jpg" target="_blank"><button alt="Fig. 11. General view of Trench Sq2 from the northwest (image by Jolanta Młynarczyk)" class="badge clickable-badge">Fig. 11</button></a></span>). 
+                                    </figure>
+                                </div>
+        
+                            </div>
+    
+                            <div class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <p><span class="fw-semibold">Trench Sq2</span> was opened before the easternmost arch preserved in the southern row of courtyard arcades. By their style of execution, the arches belong to the Roman period. The exploration of this particular one reached the original level of the courtyard, exposing a massive stylobate on which the arch was constructed 
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.11._arch.jpg" data-pswp-width="3888" data-pswp-height="5184" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 11. General view of Trench Sq2 from the northwest (image by Jolanta Młynarczyk)">Fig. 11</button></a></span>). 
                                 </p>
-<p id="paragraph-160">It also revealed two significant phases of re-use of the space sheltered by the arcade. In the first phase, this space was separated by two north-south walls abutting the piers of the arcade and by a back wall, closing the original passage. This back wall was initially provided with a door, the lintel block of which, with a cross in shallow relief, had been re-used from some Christian structure 
-                                    (<span class="pswp-gallery__item"><a data-pswp-height="1150" data-pswp-width="1056" href="assets/images/exploration1/fig.12._sq2_south_elev.jpg" target="_blank"><button alt="Fig. 12. Trench Sq2: elevation of the Roman arch with Islamic-period alterations including a re-used lintel with engraved cross (image by Anna Kubicka)" class="badge clickable-badge">Fig. 12</button></a></span>).
+                                <p>It also revealed two significant phases of re-use of the space sheltered by the arcade. In the first phase, this space was separated by two north-south walls abutting the piers of the arcade and by a back wall, closing the original passage. This back wall was initially provided with a door, the lintel block of which, with a cross in shallow relief, had been re-used from some Christian structure 
+                                    (<span class="pswp-gallery__item"><a 
+                                        href="assets/images/exploration1/fig.12._sq2_south_elev.jpg" data-pswp-width="1056" data-pswp-height="1150" target="_blank"><button
+                                            class="badge clickable-badge"
+                                            alt="Fig. 12. Trench Sq2: elevation of the Roman arch with Islamic-period alterations including a re-used lintel with engraved cross (image by Anna Kubicka)">Fig. 12</button></a></span>).
                                 </p>
-</div>
-<div class="row justify-content-evenly gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="5184" data-pswp-width="3888" href="assets/images/exploration1/fig.11._arch.jpg" target="_blank">
-<img alt="Fig. 11. General view of Trench Sq2 from the northwest (image by Jolanta Młynarczyk)" class="figure-img figure-image-vert400 img-fluid" src="assets/images/exploration1/fig.11._arch_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-181">
-                                            Fig. 11. General view of Trench Sq2 from the<br class="d-none d-md-block"/> northwest (image by Jolanta Młynarczyk)    
+                            </div>
+                            <div class="row justify-content-evenly gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.11._arch.jpg" data-pswp-width="3888" data-pswp-height="5184" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.11._arch_640.jpg" 
+                                                class="figure-img figure-image-vert400 img-fluid"
+                                                alt="Fig. 11. General view of Trench Sq2 from the northwest (image by Jolanta Młynarczyk)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 11. General view of Trench Sq2 from the<br class="d-none d-md-block"> northwest (image by Jolanta Młynarczyk)    
                                         </figcaption>
-</figure>
-</div>
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="1150" data-pswp-width="1056" href="assets/images/exploration1/fig.12._sq2_south_elev.jpg" target="_blank">
-<img alt="Fig. 12. Trench Sq2: elevation of the Roman arch with Islamic-period alterations including a re-used lintel with engraved cross (image by Anna Kubicka)" class="figure-img figure-image-vert400 img-fluid" src="assets/images/exploration1/fig.12._sq2_south_elev_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-182">
-                                            Fig. 12. Trench Sq2: elevation of the Roman arch with<br class="d-none d-md-block"/> Islamic-period alterations including a re-used lintel with<br class="d-none d-md-block"/> engraved cross (image by Anna Kubicka)    
+                                    </figure>
+                                </div>
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.12._sq2_south_elev.jpg" data-pswp-width="1056" data-pswp-height="1150" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.12._sq2_south_elev_640.jpg" 
+                                                class="figure-img figure-image-vert400 img-fluid"
+                                                alt="Fig. 12. Trench Sq2: elevation of the Roman arch with Islamic-period alterations including a re-used lintel with engraved cross (image by Anna Kubicka)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 12. Trench Sq2: elevation of the Roman arch with<br class="d-none d-md-block"> Islamic-period alterations including a re-used lintel with<br class="d-none d-md-block"> engraved cross (image by Anna Kubicka)    
                                         </figcaption>
-</figure>
-</div>
-</div>
-<p id="paragraph-161">In the second chronological phase, also the door was blocked. Despite the clear Roman origin of the arch, the floors connected with the usage of this room, which must have served either as a habitation or a workshop, yielded pottery of the Medieval period. Specifically, the lower floor (pertaining to the first phase of the re-use of the arch) yielded terracotta oil lamps of the 9th-11th century AD accompanied by domestic pottery. The upper floor, probably contemporary with the blocking of the door, seems to have been from the Mamluk period. Finally, roughly at the level of the cornice of the arcade piers, a Bedouin (?) burial was arranged in a narrow space between the blockage and a row of upright slabs; it contained bones of four adults, badly disturbed by tomb robbers, doubtlessly in the modern times.</p>
-<p class="gallery pswp-gallery--with-caption" id="gallery--with-custom-caption"><span class="fw-semibold">Trench Sq3</span> – a small trench was opened at the outer side of the corresponding arch (apparently damaged) in the northern row of the arcades. It revealed a corner space between the arcade and a north-south wall, possibly closing the courtyard on the east 
-                                (<span class="pswp-gallery__item"><a data-pswp-height="3888" data-pswp-width="5184" href="assets/images/exploration1/fig.13._sq3_general_view.jpg" target="_blank"><button alt="Fig. 13. General view of Trench Sq3 from the east (image by Jolanta Młynarczyk)" class="badge clickable-badge">Fig. 13</button></a></span>). 
+                                    </figure>
+                                </div>
+                            </div>
+                            <p>In the second chronological phase, also the door was blocked. Despite the clear Roman origin of the arch, the floors connected with the usage of this room, which must have served either as a habitation or a workshop, yielded pottery of the Medieval period. Specifically, the lower floor (pertaining to the first phase of the re-use of the arch) yielded terracotta oil lamps of the 9th-11th century AD accompanied by domestic pottery. The upper floor, probably contemporary with the blocking of the door, seems to have been from the Mamluk period. Finally, roughly at the level of the cornice of the arcade piers, a Bedouin (?) burial was arranged in a narrow space between the blockage and a row of upright slabs; it contained bones of four adults, badly disturbed by tomb robbers, doubtlessly in the modern times.</p>
+    
+                            <p class="gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption"><span class="fw-semibold">Trench Sq3</span> – a small trench was opened at the outer side of the corresponding arch (apparently damaged) in the northern row of the arcades. It revealed a corner space between the arcade and a north-south wall, possibly closing the courtyard on the east 
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/exploration1/fig.13._sq3_general_view.jpg" data-pswp-width="5184" data-pswp-height="3888" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 13. General view of Trench Sq3 from the east (image by Jolanta Młynarczyk)">Fig. 13</button></a></span>). 
                                 The uppermost habitation level attested by the find of an almost complete painted jug (amphora?) apparently <i>in situ</i> 
-                                (<span class="pswp-gallery__item"><a data-pswp-height="2622" data-pswp-width="4923" href="assets/images/exploration1/fig.14._geometrical_jug.jpg" target="_blank"><button alt="Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3 (image by Mariusz Burdajewicz)" class="badge clickable-badge">Fig. 14</button></a></span>).
+                                (<span class="pswp-gallery__item"><a 
+                                    href="assets/images/exploration1/fig.14._geometrical_jug.jpg" data-pswp-width="4923" data-pswp-height="2622" target="_blank"><button
+                                        class="badge clickable-badge"
+                                        alt="Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3 (image by Mariusz Burdajewicz)">Fig. 14</button></a></span>).
                             </p>
-<div class="row justify-content-evenly gallery pswp-gallery--with-caption" id="gallery--with-custom-caption">
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="3888" data-pswp-width="5184" href="assets/images/exploration1/fig.13._sq3_general_view.jpg" target="_blank">
-<img alt="Fig. 13. General view of Trench Sq3 from the east (image by Jolanta Młynarczyk)" class="figure-img figure-image-vert300 img-fluid" src="assets/images/exploration1/fig.13._sq3_general_view_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-183">
-                                            Fig. 13. General view of Trench Sq3 from the east (image by<br class="d-none d-md-block"/> Jolanta Młynarczyk)
+                            <div class="row justify-content-evenly gallery pswp-gallery--with-caption"  id="gallery--with-custom-caption">
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.13._sq3_general_view.jpg" data-pswp-width="5184" data-pswp-height="3888" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.13._sq3_general_view_640.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid"
+                                                alt="Fig. 13. General view of Trench Sq3 from the east (image by Jolanta Młynarczyk)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 13. General view of Trench Sq3 from the east (image by<br class="d-none d-md-block"> Jolanta Młynarczyk)
                                         </figcaption>
-</figure>
-</div>
-<div class="mb-4 col-auto">
-<figure class="figure">
-<div class="pswp-gallery__item">
-<a data-pswp-height="2622" data-pswp-width="4923" href="assets/images/exploration1/fig.14._geometrical_jug.jpg" target="_blank">
-<img alt="Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3 (image by Mariusz Burdajewicz)" class="figure-img figure-image-vert300 img-fluid" src="assets/images/exploration1/fig.14._geometrical_jug_640.jpg"/>
-</a>
-</div>
-<figcaption class="figure-caption float" id="figcaption-184">
-                                            Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3<br class="d-none d-md-block"/> (image by Mariusz Burdajewicz)
+                                    </figure>
+                                </div>  
+                                <div class="mb-4 col-auto">
+                                    <figure class="figure" >
+                                        <div class=" pswp-gallery__item">
+                                            <a href="assets/images/exploration1/fig.14._geometrical_jug.jpg" data-pswp-width="4923" data-pswp-height="2622" target="_blank">
+                                                <img 
+                                                src="assets/images/exploration1/fig.14._geometrical_jug_640.jpg" 
+                                                class="figure-img figure-image-vert300 img-fluid"
+                                                alt="Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3 (image by Mariusz Burdajewicz)" >
+                                            </a>
+                                        </div>
+                                        <figcaption class="figure-caption float">
+                                            Fig. 14. A geometrically painted jug or amphora found in the upper layer of Trench Sq3<br class="d-none d-md-block"> (image by Mariusz Burdajewicz)
                                         </figcaption>
-</figure>
-</div>
-</div>
-<p id="paragraph-162">To sum up, the exploration results in all three trenches testify to a dense habitation of the site in the Middle Ages, especially in the Mamluk period, when the earlier Roman structures were primarily used. Instead, the absence of Byzantine and early Islamic remains, which may have been situated in other parts of the original Roman-period compound, is striking.</p>
-</div>
-<h4 class="fw-light pt-5 text-center" id="section-136">Select pottery from Trenches Sq1 and Sq2 (drawings Mariusz Burdajewicz):</h4>
-<div class="row gallery pswp-gallery--with-caption pt-2 text-center" id="gallery--with-custom-caption">
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="2409" data-pswp-width="2409" href="assets/images/exploration1/a._select_pottery_of_the_ayyubid-mamluk_period_from_the_uppermost_layer_of_trench_sq1.jpg" target="_blank">
-<img alt="Pottery of the Ayyubid-Mamluk period from the uppermost layer of Trench Sq1" class="img-fluid" src="assets/images/exploration1/a._select_pottery_of_the_ayyubid-mamluk_period_from_the_uppermost_layer_of_trench_sq1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-163">Pottery of the Ayyubid-Mamluk period from the uppermost layer of Trench Sq1</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="1871" data-pswp-width="1871" href="assets/images/exploration1/b._select_pottery_of_the_ayyubid-mamluk_period_from_the_upper_layers_of_trench_sq1.jpg" target="_blank">
-<img alt="Pottery of the Ayyubid-Mamluk period from the upper layers of Trench Sq1" class="img-fluid" src="assets/images/exploration1/b._select_pottery_of_the_ayyubid-mamluk_period_from_the_upper_layers_of_trench_sq1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-164">Pottery of the Ayyubid-Mamluk period from the upper layers of Trench Sq1</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="2296" data-pswp-width="2296" href="assets/images/exploration1/c._fragmentary_oil_lamps_from_the_upper_layers_of_trench_sq1.jpg" target="_blank">
-<img alt="Fragmentary oil lamps from the upper layers of Trench Sq1" class="img-fluid" src="assets/images/exploration1/c._fragmentary_oil_lamps_from_the_upper_layers_of_trench_sq1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-165">Fragmentary oil lamps from the upper layers of Trench Sq1</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="2452" data-pswp-width="2452" href="assets/images/exploration1/d._select_pottery_from_the_lowest_layers_of_trench_sq1.jpg" target="_blank">
-<img alt="Pottery from the lowest layers of Trench Sq1" class="img-fluid" src="assets/images/exploration1/d._select_pottery_from_the_lowest_layers_of_trench_sq1_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-166">Pottery from the lowest layers of Trench Sq1</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="1791" data-pswp-width="1791" href="assets/images/exploration1/e._select_pottery_from_the_lowest_layers_of_trench_sq2.jpg" target="_blank">
-<img alt="Pottery from the lowest layers of Trench Sq2" class="img-fluid" src="assets/images/exploration1/e._select_pottery_from_the_lowest_layers_of_trench_sq2_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-167">Pottery from the lowest layers of Trench Sq2</p>
-</div>
-<div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
-<a data-pswp-height="2097" data-pswp-width="2097" href="assets/images/exploration1/f._oil_lamps_found_on_the_floor_of_the_first_islamic_re-use_of_the_arch_in_trench_sq2.jpg" target="_blank">
-<img alt="Oil lamps found on the floor of the first Islamic re-use of the arch in Trench Sq2" class="img-fluid" src="assets/images/exploration1/f._oil_lamps_found_on_the_floor_of_the_first_islamic_re-use_of_the_arch_in_trench_sq2_640.jpg"/>
-</a>
-<p class="py-2" id="paragraph-168">Oil lamps found on the floor of the first Islamic re-use of the arch in Trench Sq2</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- CONTENT KONIEC -->
-</div>
-<div class="pt-5 mt-auto" id="footer"></div>
-</div>
-<!-- SCRIPTS v1.9+tooltips -->
-<script crossorigin="anonymous" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/scripts/footer.js"></script>
-<script src="assets/scripts/header.js"></script>
-<script src="assets/scripts/scripts.js"></script>
-<script src="assets/scripts/gallery+caption.js" type="module"></script>
-<script>
+                                    </figure>
+                                </div>
+                            </div>                      
+                            <p>To sum up, the exploration results in all three trenches testify to a dense habitation of the site in the Middle Ages, especially in the Mamluk period, when the earlier Roman structures were primarily used. Instead, the absence of Byzantine and early Islamic remains, which may have been situated in other parts of the original Roman-period compound, is striking.</p>
+    
+                        </div>
+                        
+
+                        <h4 class="fw-light pt-5 text-center">Select pottery from Trenches Sq1 and Sq2 (drawings Mariusz Burdajewicz):</h4>
+                        <div class="row gallery pswp-gallery--with-caption pt-2 text-center" id="gallery--with-custom-caption">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/a._select_pottery_of_the_ayyubid-mamluk_period_from_the_uppermost_layer_of_trench_sq1.jpg" data-pswp-width="2409" data-pswp-height="2409" target="_blank">
+                                    <img src="assets/images/exploration1/a._select_pottery_of_the_ayyubid-mamluk_period_from_the_uppermost_layer_of_trench_sq1_640.jpg" alt="Pottery of the Ayyubid-Mamluk period from the uppermost layer of Trench Sq1" class="img-fluid">
+                                </a>
+                                <p class="py-2">Pottery of the Ayyubid-Mamluk period from the uppermost layer of Trench Sq1</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/b._select_pottery_of_the_ayyubid-mamluk_period_from_the_upper_layers_of_trench_sq1.jpg" data-pswp-width="1871" data-pswp-height="1871" target="_blank">
+                                    <img src="assets/images/exploration1/b._select_pottery_of_the_ayyubid-mamluk_period_from_the_upper_layers_of_trench_sq1_640.jpg" alt="Pottery of the Ayyubid-Mamluk period from the upper layers of Trench Sq1" class="img-fluid">
+                                </a>
+                                <p class="py-2">Pottery of the Ayyubid-Mamluk period from the upper layers of Trench Sq1</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/c._fragmentary_oil_lamps_from_the_upper_layers_of_trench_sq1.jpg" data-pswp-width="2296" data-pswp-height="2296" target="_blank">
+                                    <img src="assets/images/exploration1/c._fragmentary_oil_lamps_from_the_upper_layers_of_trench_sq1_640.jpg" alt="Fragmentary oil lamps from the upper layers of Trench Sq1" class="img-fluid">
+                                </a>
+                                <p class="py-2">Fragmentary oil lamps from the upper layers of Trench Sq1</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/d._select_pottery_from_the_lowest_layers_of_trench_sq1.jpg" data-pswp-width="2452" data-pswp-height="2452" target="_blank">
+                                    <img src="assets/images/exploration1/d._select_pottery_from_the_lowest_layers_of_trench_sq1_640.jpg" alt="Pottery from the lowest layers of Trench Sq1" class="img-fluid">
+                                </a>
+                                <p class="py-2">Pottery from the lowest layers of Trench Sq1</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/e._select_pottery_from_the_lowest_layers_of_trench_sq2.jpg" data-pswp-width="1791" data-pswp-height="1791" target="_blank">
+                                    <img src="assets/images/exploration1/e._select_pottery_from_the_lowest_layers_of_trench_sq2_640.jpg" alt="Pottery from the lowest layers of Trench Sq2" class="img-fluid">
+                                </a>
+                                <p class="py-2">Pottery from the lowest layers of Trench Sq2</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mb-4 pswp-gallery__item">
+                                <a href="assets/images/exploration1/f._oil_lamps_found_on_the_floor_of_the_first_islamic_re-use_of_the_arch_in_trench_sq2.jpg" data-pswp-width="2097" data-pswp-height="2097" target="_blank">
+                                    <img src="assets/images/exploration1/f._oil_lamps_found_on_the_floor_of_the_first_islamic_re-use_of_the_arch_in_trench_sq2_640.jpg" alt="Oil lamps found on the floor of the first Islamic re-use of the arch in Trench Sq2" class="img-fluid">
+                                </a>
+                                <p class="py-2">Oil lamps found on the floor of the first Islamic re-use of the arch in Trench Sq2</p>
+                            </div>
+                        </div>                        
+                    </div>
+                        
+                </div>
+                
+            </div>
+            <!-- CONTENT KONIEC -->
+        </div>
+
+        <div id="footer" class="pt-5 mt-auto"></div>
+    </div>
+
+    <!-- SCRIPTS v1.9+tooltips -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/scripts/footer.js"></script>
+    <script src="assets/scripts/header.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
+    <script type="module" src="assets/scripts/gallery+caption.js"></script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
           const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
           const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -529,6 +646,10 @@
           });
         });
     </script>
-<!-- END OF SCRIPTS -->
+
+    <!-- END OF SCRIPTS -->
+
+
 </body>
+
 </html>
