@@ -3,6 +3,7 @@
 /layouts/templates.html
 /layouts/snippets.html
 /backup
+/pointclouds
 
 #vs-code settings
 .vscode/
