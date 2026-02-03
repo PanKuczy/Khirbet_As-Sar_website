@@ -464,6 +464,8 @@ figcaption {
     }
     .figure-image-vert200, .figure-image-vert300, .figure-image-vert400, .figure-image-vert500 {
         max-height: none;
+        /* width: 516px; */
+        /* width: 100%; */
     }
     #exploration-fig3-float{
         display: none;
