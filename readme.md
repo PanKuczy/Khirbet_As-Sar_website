@@ -20,10 +20,12 @@ document.head.appendChild(baseTag);
 
 ## Technologies
 - HTML, CSS, JavaScript, Bootstrap
-- Flexsearch npm for search module
+- Static search module based on Flexsearch
 - PhotoSwipe npm for images display handling
+- Potree pointcloud engine for 3D pointcloud presentation
 
 ## Other information
+- This website is static
 - There are minor SCSS customizations of bootstrap, mostly color related
 - There's no cookie consent module because there's no tracking of any information
 - There's no SEO-optimization
@@ -31,4 +33,4 @@ document.head.appendChild(baseTag);
 ## Contact
 - Author: Przemysław Kuczyński
 - https://github.com/PanKuczy/
-- Email: paleblue.visual@gmail.com
+- Email: paleblue.design@mailbox.org
