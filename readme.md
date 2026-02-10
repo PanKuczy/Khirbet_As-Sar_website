@@ -22,7 +22,7 @@ document.head.appendChild(baseTag);
 - HTML, CSS, JavaScript, Bootstrap
 - Static search module based on Flexsearch
 - PhotoSwipe npm for images display handling
-- Potree pointcloud engine for 3D pointcloud presentation
+- Potree pointcloud engine for 3D pointcloud presentation, placed on RC Cloudflare storage
 
 ## Other information
 - This website is static
